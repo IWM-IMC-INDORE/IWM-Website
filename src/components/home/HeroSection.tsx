@@ -5,7 +5,7 @@ import iwmLogo from "@/assets/iwm-logo.png";
 
 const stats = [
   { label: "Interns Trained", value: "2,500+", icon: Users },
-  { label: "Departments", value: "35", icon: Building2 },
+  { label: "Departments", value: "9", icon: Building2 },
   { label: "Projects Completed", value: "500+", icon: Award },
   { label: "Batches", value: "15+", icon: Calendar },
 ];

@@ -1,12 +1,10 @@
 import { PublicLayout } from "@/components/layout/PublicLayout";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { CheckCircle2, XCircle, Search, ArrowRight } from "lucide-react";
+import { Search } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import {CheckCircle2 } from "lucide-react"
 
 const eligibilityCriteria = [
   { text: "Currently enrolled in undergraduate (any year) or postgraduate program", eligible: true },
@@ -53,17 +51,7 @@ const faqs = [
 ];
 
 const Eligibility = () => {
-  const [educationStatus, setEducationStatus] = useState("");
-  const [stream, setStream] = useState("");
-  const [availability, setAvailability] = useState("");
-  const [checkResult, setCheckResult] = useState<null | boolean>(null);
   const [searchQuery, setSearchQuery] = useState("");
-
-  const checkEligibility = () => {
-    const isEligible = educationStatus !== "" && availability === "yes";
-    setCheckResult(isEligible);
-  };
-
   const filteredFaqs = faqs.filter(
     (faq) =>
       faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -83,10 +71,9 @@ const Eligibility = () => {
       </section>
 
       {/* Eligibility Checker */}
-      <section className="py-16 bg-background">
+       <section className="py-16 bg-background">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Criteria List */}
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-6">Eligibility Criteria</h2>
               <div className="space-y-3">
@@ -98,8 +85,11 @@ const Eligibility = () => {
                 ))}
               </div>
             </div>
+          </div>
+          </div>
 
-            {/* Eligibility Checker Tool */}
+        </section> 
+            {/* Eligibility Checker Tool /}
             <div className="bg-card rounded-2xl p-6 border border-border shadow-lg h-fit">
               <h3 className="text-xl font-semibold text-foreground mb-6">Quick Eligibility Check</h3>
               <div className="space-y-4">
@@ -186,8 +176,7 @@ const Eligibility = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+      */}
 
       {/* FAQ Section */}
       <section className="py-16 bg-muted/50">

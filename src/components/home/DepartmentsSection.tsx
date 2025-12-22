@@ -1,18 +1,15 @@
 import { Building2 } from "lucide-react";
 
 const departments = [
-  "Urban Planning",
-  "Public Health",
-  "Smart City",
-  "Sanitation",
-  "Water Supply",
-  "Finance",
-  "Education",
-  "Sports",
   "IT & e-Governance",
-  "Environment",
-  "Traffic Management",
-  "Legal Affairs",
+  "Revenue",
+  "Smart City",
+  "AICTSL",
+  "Public Works Department",
+  "Finance and Accounts Department",
+  "LAW Department",
+  "SBM",
+  "PR & Journalism",
 ];
 
 export function DepartmentsSection() {
@@ -21,13 +18,13 @@ export function DepartmentsSection() {
       <div className="container">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <span className="inline-block px-4 py-1 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium mb-4">
-            35 Departments
+            9 Departments
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Explore Diverse Career Paths
           </h2>
           <p className="text-lg text-muted-foreground">
-            Interns are assigned to one of 35 specialized departments based on their interests, skills, and academic background.
+            Interns are assigned to one of 9 specialized departments based on their interests, skills, and academic background.
           </p>
         </div>
 
@@ -44,7 +41,7 @@ export function DepartmentsSection() {
             </div>
           ))}
           <div className="p-4 rounded-xl bg-primary text-primary-foreground flex items-center justify-center font-medium">
-            +23 More Departments
+            Explore in Detail
           </div>
         </div>
       </div>

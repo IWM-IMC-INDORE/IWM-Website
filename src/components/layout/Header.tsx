@@ -9,7 +9,7 @@ const navLinks = [
   { href: "/about", label: "About IWM" },
   { href: "/eligibility", label: "Eligibility" },
   { href: "/alumni", label: "Alumni" },
-  { href: "/projects", label: "Projects" },
+  // { href: "/projects", label: "Projects" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -51,12 +51,12 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link to="/login" className="hidden sm:block">
+          {/* <Link to="/login" className="hidden sm:block">
             <Button variant="ghost" size="sm">Login</Button>
           </Link>
           <Link to="/register" className="hidden sm:block">
             <Button variant="civic" size="sm">Register</Button>
-          </Link>
+          </Link> */}
           
           {/* Mobile Menu Button */}
           <Button

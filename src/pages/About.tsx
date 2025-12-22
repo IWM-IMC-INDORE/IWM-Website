@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const programHighlights = [
   { icon: Calendar, label: "Duration", value: "40-45 Days" },
   { icon: Users, label: "Batch Size", value: "200+ Interns" },
-  { icon: Building2, label: "Departments", value: "35 Specialized" },
+  { icon: Building2, label: "Departments", value: "9 Specialized" },
   { icon: Award, label: "Certificate", value: "Government Recognized" },
 ];
 
