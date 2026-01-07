@@ -8,7 +8,7 @@ import CountUp from "@/components/ui/countup";
 const stats = [
   { label: "Interns Trained", value: "2,500+", icon: Users, end: 2500, suffix: "+" },
   { label: "Departments", value: "9", icon: Building2, end: 9, suffix: "" },
-  { label: "Batches", value: "8+", icon: Calendar, end: 8, suffix: "+" },
+  { label: "Batches", value: "7+", icon: Calendar, end: 7, suffix: "+" },
 ];
 
 export function HeroSection() {
@@ -42,7 +42,7 @@ export function HeroSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: "0.3s" }}>
-              <Link to="/register">
+              <Link to="https://docs.google.com/forms/d/e/1FAIpQLSevZtptEtkpNbml4wzx4pvY5TtRDEJ3pBgIWhqZJSwJk9v75w/viewform">
                 <Button variant="hero" size="xl" className="group">
                   Apply Now
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />

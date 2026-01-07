@@ -11,20 +11,28 @@ import Autoplay from "embla-carousel-autoplay";
 // ⚠️ Replace these URLs with your actual images (e.g., imports from assets)
 const galleryImages = [
   {
-    src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1470&auto=format&fit=crop",
+    src: "https://res.cloudinary.com/dvneefjpi/image/upload/v1767773000/345699526_632234488811167_9193590834147068485_n_iafmbq.jpg",
     alt: "Interns collaborating in a meeting"
   },
   {
-    src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1471&auto=format&fit=crop",
+    src: "https://res.cloudinary.com/dvneefjpi/image/upload/v1767773810/ekpedmaakenaam_worldrecord_internshipwithmayorInternship_with_mayor_students_played_an_impact_1_puyqo1.jpg",
     alt: "Field work and site inspection"
   },
   {
-    src: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1470&auto=format&fit=crop",
+    src: "https://res.cloudinary.com/dvneefjpi/image/upload/v1767773009/472545215_1669875810576187_2809314555655141950_n_ioro9j.jpg",
     alt: "Team presentation session"
   },
   {
-    src: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1470&auto=format&fit=crop",
-    alt: "Group photo of Batch 15"
+    src: "https://res.cloudinary.com/dvneefjpi/image/upload/v1767773652/200_interns_enrolled_in_Intership_with_Mayor_IMC_departments_internshipwithmayorAccounts_Fi_ni6rrf.jpg",
+    alt: "Group photo"
+  },
+  {
+    src: "https://res.cloudinary.com/dvneefjpi/image/upload/v1767773811/ekpedmaakenaam_worldrecord_internshipwithmayorInternship_with_mayor_students_played_an_impact_3_bedyzj.jpg",
+    alt: "Group photo"
+  },
+  {
+    src: "https://res.cloudinary.com/dvneefjpi/image/upload/v1767774131/get_balm0m.jpg",
+    alt: "Group photo "
   },
 ];
 

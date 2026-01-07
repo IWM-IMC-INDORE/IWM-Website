@@ -60,8 +60,8 @@ export function Footer() {
               <p>Indore Municipal Corporation</p>
               <p>M.G. Road, Indore, M.P.</p>
               <p>India - 452001</p>
-              <a href="mailto:iwm@imc.gov.in" className="text-civic-green hover:underline">
-                iwm@imc.gov.in
+              <a href="mailto:iwmimcindore@gmail.com" className="text-civic-green hover:underline">
+                iwmimcindore@gmail.com
               </a>
             </div>
           </div>

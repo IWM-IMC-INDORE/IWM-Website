@@ -51,7 +51,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link to="/register" className="hidden lg:block">
+          <Link to="https://docs.google.com/forms/d/e/1FAIpQLSevZtptEtkpNbml4wzx4pvY5TtRDEJ3pBgIWhqZJSwJk9v75w/viewform" className="hidden lg:block">
             <Button variant="hero" size="sm" className="shadow-none">Register Now</Button>
           </Link>
 
@@ -90,7 +90,7 @@ export function Header() {
               <Link to="/login" className="flex-1" onClick={() => setIsOpen(false)}>
                 <Button variant="outline" className="w-full">Login</Button>
               </Link>
-              <Link to="/register" className="flex-1" onClick={() => setIsOpen(false)}>
+              <Link to="https://docs.google.com/forms/d/e/1FAIpQLSevZtptEtkpNbml4wzx4pvY5TtRDEJ3pBgIWhqZJSwJk9v75w/viewform" className="flex-1" onClick={() => setIsOpen(false)}>
                 <Button variant="civic" className="w-full">Register</Button>
               </Link>
             </div>

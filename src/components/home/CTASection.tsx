@@ -11,14 +11,27 @@ const timeline = [
 
 export function CTASection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-primary via-primary/95 to-emerald-800 relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden">
+      {/* Background Image Layer */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url('https://res.cloudinary.com/dvneefjpi/image/upload/v1767773007/449536171_1460065101310392_1695858522912035297_n_ezpqr4.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      />
+      
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/85 via-primary/80 to-emerald-900/80 z-10" />
+
       {/* Background decoration */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-10 z-20 pointer-events-none">
         <div className="absolute top-1/2 left-0 w-64 h-64 bg-white rounded-full blur-3xl -translate-y-1/2" />
         <div className="absolute top-1/2 right-0 w-64 h-64 bg-emerald-400 rounded-full blur-3xl -translate-y-1/2" />
       </div>
 
-      <div className="container relative">
+      <div className="container relative z-30">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-1 rounded-full bg-white/10 text-white/90 text-sm font-medium mb-4">
@@ -38,7 +51,7 @@ export function CTASection() {
                 {index < timeline.length - 1 && (
                   <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-white/20" />
                 )}
-                <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-colors">
+                <div className="relative bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center hover:bg-white/20 transition-all">
                   <div className="w-16 h-16 rounded-full bg-amber-400 text-amber-950 flex items-center justify-center mx-auto mb-4 font-bold text-xl">
                     {item.step}
                   </div>
@@ -50,7 +63,7 @@ export function CTASection() {
           </div>
 
           <div className="text-center">
-            <Link to="/register">
+            <Link to="https://docs.google.com/forms/d/e/1FAIpQLSevZtptEtkpNbml4wzx4pvY5TtRDEJ3pBgIWhqZJSwJk9v75w/viewform">
               <Button variant="gold" size="xl" className="group">
                 Start Your Application
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
