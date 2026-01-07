@@ -87,9 +87,6 @@ export function Header() {
               </Link>
             ))}
             <div className="flex gap-2 pt-2 border-t border-border mt-2">
-              <Link to="/login" className="flex-1" onClick={() => setIsOpen(false)}>
-                <Button variant="outline" className="w-full">Login</Button>
-              </Link>
               <Link to="https://docs.google.com/forms/d/e/1FAIpQLSevZtptEtkpNbml4wzx4pvY5TtRDEJ3pBgIWhqZJSwJk9v75w/viewform" className="flex-1" onClick={() => setIsOpen(false)}>
                 <Button variant="civic" className="w-full">Register</Button>
               </Link>
