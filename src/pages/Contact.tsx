@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, Instagram, Linkedin } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -31,6 +31,18 @@ const contactInfo = [
     title: "Office Hours",
     details: ["Mon - Sat: 10:00 AM - 5:30 PM", "Sunday: Closed"],
     link: null,
+  },
+  {
+    icon: Instagram,
+    title: "Instagram",
+    details: ["@internshipwithmayor.indore"],
+    link: "https://www.instagram.com/internshipwithmayor.indore/",
+  },
+  {
+    icon: Linkedin,
+    title: "LinkedIn",
+    details: ["Internship with Mayor"],
+    link: "https://www.linkedin.com/company/internship-with-mayor-indore/",
   },
 ];
 
@@ -74,8 +86,8 @@ const Contact = () => {
                 {contactInfo.map((item) => {
                   const Wrapper = item.link ? "a" : "div";
                   return (
-                    <Wrapper 
-                      key={item.title} 
+                    <Wrapper
+                      key={item.title}
                       href={item.link || undefined}
                       target={item.link?.startsWith('http') ? "_blank" : undefined}
                       rel={item.link?.startsWith('http') ? "noopener noreferrer" : undefined}

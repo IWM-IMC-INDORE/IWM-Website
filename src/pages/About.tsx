@@ -71,7 +71,7 @@ const About = () => {
                 Each batch works on real projects across 35 departments, gaining invaluable experience while contributing meaningfully to the development of Indore – consistently ranked as India's cleanest city.
               </p>
             </div>
-            
+
             <div className="bg-card rounded-2xl p-8 border border-border">
               <h3 className="text-xl font-semibold text-foreground mb-6 flex items-center gap-2">
                 <Target className="w-5 h-5 text-emerald-600" />
@@ -109,6 +109,7 @@ const About = () => {
               { title: "Real Project Experience", desc: "Work on actual civic projects impacting millions of citizens." },
               { title: "Professional Network", desc: "Build lasting connections with peers and officials." },
               { title: "Skill Development", desc: "Gain practical skills in governance, management, and public policy." },
+              { title: "Premium Expert Sessions", desc: "Exclusive masterclasses on entrepreneurship, personality development, and high-impact resume building." },
               { title: "Letter of Recommendation", desc: "Outstanding performers receive official recommendations." },
             ].map((benefit) => (
               <div key={benefit.title} className="bg-card rounded-xl p-6 border border-border">
