@@ -38,14 +38,14 @@ const About = () => {
         <div
           className="absolute inset-0 z-0 opacity-20 pointer-events-none"
           style={{
-            backgroundImage: `url('https://res.cloudinary.com/dvneefjpi/image/upload/v1768368501/Untitled_design_iytosf.png')`,
+            backgroundImage: `url('https://res.cloudinary.com/dvneefjpi/image/upload/v1768369473/Untitled_design1_u1lcae.png')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
         />
 
         <div className="container relative z-10">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl pt-12 md:pt-20 lg:pt-28">
             <span className="inline-block px-4 py-1 rounded-full bg-white/10 text-white/90 text-sm font-medium mb-4">
               About the Program
             </span>
