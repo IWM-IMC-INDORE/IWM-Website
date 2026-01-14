@@ -5,7 +5,7 @@ import { Mail, Phone, MapPin, Clock, Instagram, Linkedin } from "lucide-react";
 const contactInfo = [
   {
     icon: MapPin,
-    title: "Address",
+    title: "IMC Head Office",
     details: ["Indore Municipal Corporation", "M.G. Road, Indore", "Madhya Pradesh - 452001"],
     link: "https://www.google.com/maps/search/?api=1&query=Indore+Municipal+Corporation+MG+Road+Indore",
   },

@@ -34,6 +34,10 @@ const galleryImages = [
     src: "https://res.cloudinary.com/dvneefjpi/image/upload/v1767774131/get_balm0m.jpg",
     alt: "Group photo "
   },
+  {
+    src: "https://res.cloudinary.com/dvneefjpi/image/upload/v1768370653/PXL_20251130_075041052.RAW-01.COVER_v8ggj9.jpg",
+    alt: "Group photo "
+  },
 ];
 
 export function HomeGallery() {
@@ -65,9 +69,9 @@ export function HomeGallery() {
                   <div className="p-1">
                     <Card className="border-0 shadow-md hover:shadow-xl transition-shadow duration-300">
                       <CardContent className="flex aspect-video items-center justify-center p-0 overflow-hidden rounded-lg">
-                        <img 
-                          src={img.src} 
-                          alt={img.alt} 
+                        <img
+                          src={img.src}
+                          alt={img.alt}
                           className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                         />
                       </CardContent>
