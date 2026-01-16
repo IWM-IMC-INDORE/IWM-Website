@@ -27,13 +27,13 @@ const About = () => {
         description="Learn about the Internship with Mayor (IWM) program, its vision, objectives, and the 40-45 day journey transforming youth into civic leaders."
         url="https://iwmindore.gov.in/about"
       />
-   {/* Hero Section */}
+      {/* Hero Section */}
       {/* FIX: Increased pb-32 to pb-48 (and pb-60 on larger screens). 
           This makes the blue section taller, creating room for the cards to overlap 
           without covering the text.
       */}
       <section className="relative bg-gradient-to-br from-primary via-primary/95 to-emerald-800 pt-20 pb-48 md:pb-60">
-        
+
         {/* Background image behind the gradient */}
         <div
           className="absolute inset-0 z-0 opacity-20 pointer-events-none"
@@ -69,7 +69,7 @@ const About = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 -mt-24 relative z-20">
             {programHighlights.map((item) => (
               <div key={item.label} className="bg-card rounded-xl p-6 shadow-lg border border-border bg-white">
-                 {/* Note: Added bg-white above just in case 'bg-card' is transparent */}
+                {/* Note: Added bg-white above just in case 'bg-card' is transparent */}
                 <item.icon className="w-8 h-8 text-emerald-600 mb-3" />
                 <p className="text-sm text-muted-foreground">{item.label}</p>
                 <p className="text-xl font-bold text-foreground">{item.value}</p>
@@ -84,7 +84,7 @@ const About = () => {
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+              <span className="inline-block px-4 py-1 rounded-full bg-gradient-to-br from-primary via-primary/95 to-emerald-800 text-white text-sm font-medium mb-4">
                 Our Vision
               </span>
               <h2 className="text-3xl font-bold text-foreground mb-6">
@@ -120,7 +120,7 @@ const About = () => {
       <section className="py-20 bg-muted/50">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <span className="inline-block px-4 py-1 rounded-full bg-amber-100 text-amber-700 text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-1 rounded-full bg-gradient-to-br from-primary via-primary/95 to-emerald-800 text-white text-sm font-medium mb-4">
               What You Get
             </span>
             <h2 className="text-3xl font-bold text-foreground mb-4">
@@ -131,15 +131,17 @@ const About = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { title: "Mentorship from IAS/IPS Officers", desc: "Learn directly from senior government officials with decades of experience." },
-              { title: "Certificate of Completion", desc: "Receive a government-recognized certificate upon successful completion." },
-              { title: "Professional Network", desc: "Build lasting connections with peers and officials." },
-              { title: "Skill Development", desc: "Gain practical skills in governance, management, and public policy." },
               { title: "Motivational & Awareness Sessions", desc: "Exclusive masterclasses on entrepreneurship, personality development, and high-impact resume building." },
+              { title: "Certificate of Completion", desc: "Receive a government-recognized certificate upon successful completion." },
+              { title: "Skill Development", desc: "Gain practical skills in governance, management, and public policy." },
+              { title: "Professional Network", desc: "Build lasting connections with peers and officials." },
               { title: "Letter of Recommendation", desc: "Outstanding performers receive official recommendations." },
             ].map((benefit) => (
-              <div key={benefit.title} className="bg-card rounded-xl p-6 border border-border">
-                <BookOpen className="w-8 h-8 text-primary mb-4" />
-                <h3 className="font-semibold text-foreground mb-2">{benefit.title}</h3>
+              <div key={benefit.title} className="group bg-card rounded-xl p-6 border border-border hover:border-emerald-500/50 hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-4 group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-300">
+                  <BookOpen className="w-6 h-6" />
+                </div>
+                <h3 className="font-semibold text-foreground mb-2 group-hover:text-emerald-700 transition-colors">{benefit.title}</h3>
                 <p className="text-sm text-muted-foreground">{benefit.desc}</p>
               </div>
             ))}
@@ -148,7 +150,7 @@ const About = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-primary">
+      <section className="py-20 bg-gradient-to-br from-primary via-primary/95 to-emerald-800">
         <div className="container text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Begin Your Journey?</h2>
           <p className="text-white/80 mb-8 max-w-xl mx-auto">

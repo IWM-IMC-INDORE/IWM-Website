@@ -62,7 +62,7 @@ export function DepartmentsSection() {
     <section id="DepartmentsSection" className="py-20 bg-muted/50">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <span className="inline-block px-4 py-1 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-1 rounded-full bg-gradient-to-br from-primary via-primary/95 to-emerald-800 text-white text-sm font-medium mb-4">
             12 Departments
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">

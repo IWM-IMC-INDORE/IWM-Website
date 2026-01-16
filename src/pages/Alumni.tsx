@@ -135,7 +135,7 @@ const Alumni = () => {
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <Award className="w-5 h-5 text-amber-500 mt-0.5" />
+                      <Award className="w-5 h-5 text-emerald-500 mt-0.5" />
                       <div>
                         <p className="text-xs text-muted-foreground">IWM Highlight</p>
                         <p className="text-sm text-foreground">{alum.highlight}</p>
@@ -155,14 +155,14 @@ const Alumni = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-muted/50">
+      <section className="py-16 bg-gradient-to-br from-primary via-primary/95 to-emerald-800">
         <div className="container text-center">
-          <h2 className="text-2xl font-bold text-foreground mb-4">Be the Next Success Story</h2>
-          <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
+          <h2 className="text-2xl font-bold text-white mb-4">Be the Next Success Story</h2>
+          <p className="text-blue-100 mb-6 max-w-xl mx-auto">
             Join the IWM program and start your journey towards a meaningful career in public service.
           </p>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSevZtptEtkpNbml4wzx4pvY5TtRDEJ3pBgIWhqZJSwJk9v75w/viewform" target="_blank" rel="noopener noreferrer">
-            <Button variant="civic" size="lg" className="group">
+            <Button variant="hero" size="lg" className="group">
               Apply Now
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Button>

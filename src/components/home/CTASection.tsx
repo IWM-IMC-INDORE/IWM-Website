@@ -13,7 +13,7 @@ export function CTASection() {
   return (
     <section className="py-20 relative overflow-hidden">
       {/* Background Image Layer */}
-      <div 
+      <div
         className="absolute inset-0 z-0"
         style={{
           backgroundImage: `url('https://res.cloudinary.com/dvneefjpi/image/upload/v1767773007/449536171_1460065101310392_1695858522912035297_n_ezpqr4.jpg')`,
@@ -21,7 +21,7 @@ export function CTASection() {
           backgroundPosition: 'center'
         }}
       />
-      
+
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/85 via-primary/80 to-emerald-900/80 z-10" />
 
@@ -52,7 +52,7 @@ export function CTASection() {
                   <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-white/20" />
                 )}
                 <div className="relative bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center hover:bg-white/20 hover:scale-105 transition-all duration-300 h-full flex flex-col">
-                  <div className="w-16 h-16 rounded-full bg-amber-400 text-amber-950 flex items-center justify-center mx-auto mb-4 font-bold text-xl">
+                  <div className="w-16 h-16 rounded-full bg-emerald-500 text-primary-foreground flex items-center justify-center mx-auto mb-4 font-bold text-xl shadow-lg shadow-emerald-900/20">
                     {item.step}
                   </div>
                   <h3 className="font-semibold text-white mb-2 min-h-[2.5rem] flex items-center justify-center">{item.title}</h3>
@@ -64,7 +64,7 @@ export function CTASection() {
 
           <div className="text-center">
             <Link to="https://docs.google.com/forms/d/e/1FAIpQLSevZtptEtkpNbml4wzx4pvY5TtRDEJ3pBgIWhqZJSwJk9v75w/viewform">
-              <Button variant="gold" size="xl" className="group">
+              <Button variant="hero" size="xl" className="group">
                 Start Your Application
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </Button>

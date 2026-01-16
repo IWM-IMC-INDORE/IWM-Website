@@ -18,7 +18,7 @@ const buttonVariants = cva(
         hero: "bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-transform",
         "hero-outline": "border-2 border-white/30 bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm",
         civic: "bg-emerald-600 text-white hover:bg-emerald-500 shadow-md hover:shadow-lg",
-        gold: "bg-amber-400 text-amber-950 hover:bg-amber-300 shadow-md font-semibold",
+        gold: "bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-transform",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -37,7 +37,7 @@ const buttonVariants = cva(
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+  VariantProps<typeof buttonVariants> {
   asChild?: boolean;
 }
 

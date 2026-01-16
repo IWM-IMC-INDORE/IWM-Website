@@ -57,7 +57,7 @@ export function HeroSection() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
               {stats.map((stat) => (
                 <div key={stat.label} className="text-center lg:text-left p-4 rounded-xl bg-white/5 backdrop-blur-sm">
-                  <stat.icon className="w-5 h-5 text-amber-400 mx-auto lg:mx-0 mb-2" />
+                  <stat.icon className="w-5 h-5 text-emerald-500 mx-auto lg:mx-0 mb-2" />
                   <p className="text-2xl font-bold text-white">
                     <CountUp end={stat.end} duration={3.8} suffix={stat.suffix} />
                   </p>
@@ -76,7 +76,7 @@ export function HeroSection() {
               <div className="absolute inset-8 rounded-full border-2 border-emerald-400/20 animate-pulse" style={{ animationDelay: "0.4s" }} />
 
               {/* Center content */}
-              <div className="absolute inset-10 rounded-full bg-white/95 backdrop-blur-md flex items-center justify-center shadow-2xl overflow-hidden p-4">
+              <div className="absolute inset-10 rounded-full bg-white/95 backdrop-blur-md flex items-center justify-center shadow-2xl overflow-hidden p-1">
                 <img
                   src="https://res.cloudinary.com/dvneefjpi/image/upload/v1767773032/IWM_LOGO_ENHANCED_jkruoi.png"
                   alt="IWM - Internship with Mayor"
@@ -85,10 +85,14 @@ export function HeroSection() {
               </div>
 
               {/* Floating badges */}
-              <div className="absolute top-4 right-4 px-3 py-1.5 rounded-lg bg-amber-400 text-amber-950 font-semibold text-xs shadow-lg animate-float">
+              {/* Floating badges */}
+              <div className="absolute top-8 -right-4 px-3 py-1.5 rounded-lg bg-emerald-500 text-white font-semibold text-xs shadow-lg animate-float">
                 40-45 Days
               </div>
-              <div className="absolute bottom-16 left-0 px-4 py-2 rounded-lg bg-white text-primary font-semibold text-sm shadow-lg animate-float" style={{ animationDelay: "1s" }}>
+              <div className="absolute bottom-16 -left-8 px-3 py-1.5 rounded-lg bg-emerald-500 text-white font-semibold text-xs shadow-lg animate-float" style={{ animationDelay: "1.5s" }}>
+                Batches every 2–3 months
+              </div>
+              <div className="absolute bottom-8 -right-4 px-3 py-1.5 rounded-lg bg-emerald-500 text-white font-semibold text-xs shadow-lg animate-float" style={{ animationDelay: "1s" }}>
                 Certificate on Completion
               </div>
             </div>

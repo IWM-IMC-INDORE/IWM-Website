@@ -27,8 +27,8 @@
     --muted: 210 20% 94%;
     --muted-foreground: 215 15% 45%;
 
-    --accent: 43 96% 56%;
-    --accent-foreground: 215 25% 15%;
+    --accent: 160 84% 39%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
@@ -44,14 +44,14 @@
     --civic-navy-light: 215 45% 35%;
     --civic-green: 160 84% 39%;
     --civic-green-light: 160 70% 45%;
-    --civic-gold: 43 96% 56%;
+    --civic-gold: 160 84% 39%;
     --civic-silver: 210 15% 75%;
-    
+
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(215 50% 23%) 0%, hsl(215 45% 35%) 50%, hsl(160 84% 39%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(160 84% 39%) 0%, hsl(160 70% 45%) 100%);
-    
+
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 hsl(215 25% 15% / 0.05);
     --shadow-md: 0 4px 6px -1px hsl(215 25% 15% / 0.08), 0 2px 4px -2px hsl(215 25% 15% / 0.05);
@@ -117,7 +117,12 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-semibold tracking-tight;
   }
 }
@@ -126,11 +131,11 @@
   .text-balance {
     text-wrap: balance;
   }
-  
+
   .glass-card {
     @apply bg-card/80 backdrop-blur-md border border-border/50;
   }
-  
+
   .gradient-text {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-civic-navy-light to-secondary;
   }

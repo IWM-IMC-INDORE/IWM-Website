@@ -5,7 +5,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Search } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { CheckCircle2, Globe2, GraduationCap, Clock, UserCheck } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import { CheckCircle2, Globe2, GraduationCap, Clock, UserCheck, ArrowRight } from "lucide-react"
 
 const eligibilityCriteria = [
   {
@@ -108,7 +109,7 @@ const Eligibility = () => {
       <section className="py-20 bg-muted/30">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <span className="inline-block px-4 py-1 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-1 rounded-full bg-gradient-to-br from-primary via-primary/95 to-emerald-800 text-white text-sm font-medium mb-4">
               Check Your Eligibility
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -129,7 +130,7 @@ const Eligibility = () => {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-emerald-500/10 transition-colors" />
 
                 <div className="flex items-start gap-4 relatie z-10">
-                  <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-300">
                     <item.icon className="w-6 h-6" />
                   </div>
                   <div>
@@ -142,7 +143,7 @@ const Eligibility = () => {
           </div>
 
           {/* CTA Box */}
-          <div className="mt-16 max-w-4xl mx-auto bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl relative overflow-hidden">
+          <div className="mt-16 max-w-5xl mx-auto bg-gradient-to-br from-primary via-primary/95 to-emerald-800 rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl relative overflow-hidden">
             <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
             <div className="relative z-10">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">Meet the criteria?</h3>
@@ -150,9 +151,10 @@ const Eligibility = () => {
                 Don't miss this opportunity to contribute to Indore's development. Applications are open now!
               </p>
               <Link to="https://docs.google.com/forms/d/e/1FAIpQLSevZtptEtkpNbml4wzx4pvY5TtRDEJ3pBgIWhqZJSwJk9v75w/viewform">
-                <div className="inline-flex h-12 items-center justify-center rounded-full bg-white px-8 text-sm font-medium text-emerald-600 shadow transition-colors hover:bg-emerald-50 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50">
+                <Button variant="hero" size="xl" className="group">
                   Apply for Internship
-                </div>
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </Button>
               </Link>
             </div>
           </div>

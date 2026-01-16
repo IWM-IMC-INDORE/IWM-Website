@@ -37,7 +37,7 @@ export function Header() {
           </div>
           <div className="hidden sm:block">
             <p className="text-sm font-bold text-foreground leading-tight">Internship with Mayor</p>
-            <p className="text-[10px] font-medium text-muted-foreground uppercase tracking-wide">Powered by IMC</p>
+            <p className="text-[10px] font-medium text-muted-foreground uppercase tracking-wide">Indore Municipal Coorporation</p>
           </div>
         </Link>
 

@@ -29,7 +29,7 @@ export function TestimonialsSection() {
     <section className="py-20 bg-background">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <span className="inline-block px-4 py-1 rounded-full bg-amber-100 text-amber-700 text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-1 rounded-full bg-gradient-to-br from-primary via-primary/95 to-emerald-800 text-white text-sm font-medium mb-4">
             Success Stories
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
