@@ -66,15 +66,15 @@ const Contact = () => {
         <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: `url('https://res.cloudinary.com/dvneefjpi/image/upload/v1767773020/561807879_17966057843972078_2518633767852562154_n_jesajf.webp')`,
+            backgroundImage: `url('https://res.cloudinary.com/dvneefjpi/image/upload/v1768729055/52863ccf-84c3-44f8-bc07-cc119bbc576a_knk8el.jpg')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/90 to-emerald-800/90 z-10" />
-        <div className="container relative z-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/70 to-emerald-800/70 z-10" />
+        <div className="container relative z-20 text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Contact Us</h1>
-          <p className="text-lg text-white/80 max-w-2xl">
+          <p className="text-lg text-white/80 max-w-2xl mx-auto">
             Have questions about the IWM program? We're here to help. Reach out to us through any of the channels below.
           </p>
         </div>
