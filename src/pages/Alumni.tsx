@@ -59,7 +59,7 @@ const Alumni = () => {
         url="https://iwmindore.gov.in/alumni"
       />
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-primary/95 to-emerald-800 py-16">
+      <section className="bg-gradient-to-br from-primary via-primary/95 to-emerald-800 py-32 md:py-40">
         <div className="container">
           <div className="max-w-3xl">
             <span className="inline-block px-4 py-1 rounded-full bg-white/10 text-white/90 text-sm font-medium mb-4">

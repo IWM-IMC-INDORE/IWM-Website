@@ -28,11 +28,7 @@ const About = () => {
         url="https://iwmindore.gov.in/about"
       />
       {/* Hero Section */}
-      {/* FIX: Increased pb-32 to pb-48 (and pb-60 on larger screens). 
-          This makes the blue section taller, creating room for the cards to overlap 
-          without covering the text.
-      */}
-      <section className="relative bg-gradient-to-br from-primary via-primary/95 to-emerald-800 pt-20 pb-48 md:pb-60">
+      <section className="relative bg-gradient-to-br from-primary via-primary/95 to-emerald-800 py-32 md:py-40">
 
         {/* Background image behind the gradient */}
         <div
