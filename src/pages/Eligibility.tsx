@@ -1,9 +1,6 @@
 import { PublicLayout } from "@/components/layout/PublicLayout";
 import { SEO } from "@/components/SEO";
-import { Input } from "@/components/ui/input";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Search } from "lucide-react";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Globe2, GraduationCap, Clock, UserCheck, ArrowRight } from "lucide-react"
@@ -67,12 +64,7 @@ const faqs = [
 ];
 
 const Eligibility = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-  const filteredFaqs = faqs.filter(
-    (faq) =>
-      faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+
 
   return (
     <PublicLayout>
@@ -150,7 +142,7 @@ const Eligibility = () => {
               <p className="text-slate-300 mb-8 max-w-xl mx-auto text-lg">
                 Don't miss this opportunity to contribute to Indore's development. Applications are open now!
               </p>
-              <Link to="https://docs.google.com/forms/d/e/1FAIpQLSevZtptEtkpNbml4wzx4pvY5TtRDEJ3pBgIWhqZJSwJk9v75w/viewform">
+              <Link to="https://docs.google.com/forms/d/e/1FAIpQLSevZtptEtkpNbml4wzx4pvY5TtRDEJ3pBgIWhqZJSwJk9v75w/viewform" target="_blank">
                 <Button variant="hero" size="xl" className="group">
                   Apply for Internship
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -257,19 +249,10 @@ const Eligibility = () => {
               Frequently Asked Questions
             </h2>
 
-            {/* Search */}
-            <div className="relative mb-8">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-              <Input
-                placeholder="Search FAQs..."
-                className="pl-10"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-            </div>
+
 
             <Accordion type="single" collapsible className="space-y-2">
-              {filteredFaqs.map((faq, index) => (
+              {faqs.map((faq, index) => (
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
@@ -285,11 +268,7 @@ const Eligibility = () => {
               ))}
             </Accordion>
 
-            {filteredFaqs.length === 0 && (
-              <p className="text-center text-muted-foreground py-8">
-                No FAQs found matching your search.
-              </p>
-            )}
+
           </div>
         </div>
       </section>
