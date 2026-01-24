@@ -49,7 +49,7 @@ const Terms = () => {
               {/* 2 */}
               <section>
                 <h2>2. Eligibility Criteria</h2>
-                <ul>
+                <ul className="list-disc pl-6 space-y-2">
                   <li>Must be enrolled in a recognized educational institution</li>
                   <li>Must be at least 18 years of age</li>
                   <li>Must have good academic and disciplinary standing</li>
@@ -73,7 +73,7 @@ const Terms = () => {
                 <h2>4. Internship Terms and Conditions</h2>
 
                 <h3>4.1 Duration and Attendance</h3>
-                <ul>
+                <ul className="list-disc pl-6 space-y-2">
                   <li>Minimum duration: 45 days</li>
                   <li>Maximum duration: 6 months</li>
                   <li>Working hours as per IMC norms</li>
@@ -81,7 +81,7 @@ const Terms = () => {
                 </ul>
 
                 <h3>4.2 Work Requirements</h3>
-                <ul>
+                <ul className="list-disc pl-6 space-y-2">
                   <li>Interns must use their own vehicle for conveyance</li>
                   <li>Interns must carry their own laptop/devices</li>
                   <li>IMC may provide workspace, internet, and stationery</li>
@@ -95,7 +95,7 @@ const Terms = () => {
                 </p>
 
                 <h3>4.4 Code of Conduct</h3>
-                <ul>
+                <ul className="list-disc pl-6 space-y-2">
                   <li>Maintain professional decorum and discipline</li>
                   <li>Follow safety and security protocols</li>
                   <li>No political activity during internship hours</li>

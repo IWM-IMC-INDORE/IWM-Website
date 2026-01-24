@@ -3,6 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 export function Footer() {
   const navigate = useNavigate();
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const handleDepartmentsClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
 
@@ -61,13 +65,13 @@ export function Footer() {
           <div className="space-y-4">
             <h4 className="text-sm font-semibold text-foreground">Quick Links</h4>
             <nav className="flex flex-col gap-2">
-              <Link to="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link to="/about" onClick={scrollToTop} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 About Program
               </Link>
-              <Link to="/eligibility" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link to="/eligibility" onClick={scrollToTop} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Eligibility & FAQ
               </Link>
-              <Link to="/alumni" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link to="/alumni" onClick={scrollToTop} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Alumni Stories
               </Link>
             </nav>
@@ -112,8 +116,8 @@ export function Footer() {
           Designed and developed by <a href="https://www.linkedin.com/in/asit-parth-07b3b31b3/" className="hover:text-foreground transition-colors">IWM interns</a>
         </p>
           <div className="flex gap-4 text-xs text-muted-foreground">
-            <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-foreground transition-colors">Terms of Service</Link>
+            <Link to="/privacy" onClick={scrollToTop} className="hover:text-foreground transition-colors">Privacy Policy</Link>
+            <Link to="/terms" onClick={scrollToTop} className="hover:text-foreground transition-colors">Terms of Service</Link>
           </div>
         </div>
        
