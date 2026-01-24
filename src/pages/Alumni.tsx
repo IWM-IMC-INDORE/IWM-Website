@@ -97,7 +97,7 @@ const Alumni = () => {
         <div className="container">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 -mt-20 relative z-20">
             {[
-              { label: "Total Alumni", value: "2,500+" },
+              { label: "Total Alumni", value: "1,800+" },
               { label: "Placed in Govt. Jobs", value: "350+" },
               { label: "Entrepreneurs", value: "120+" },
               { label: "Higher Education", value: "800+" },

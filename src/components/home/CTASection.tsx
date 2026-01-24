@@ -69,9 +69,6 @@ export function CTASection() {
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
-            <p className="mt-4 text-sm text-white/60">
-              Registration for Batch 8 closes on Feb 28, 2026
-            </p>
           </div>
         </div>
       </div>

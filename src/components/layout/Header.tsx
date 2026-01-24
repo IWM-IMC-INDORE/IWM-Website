@@ -17,6 +17,10 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-card/95 backdrop-blur-md">
       <div className="container flex h-16 items-center justify-between">
@@ -47,6 +51,7 @@ export function Header() {
             <Link
               key={link.href}
               to={link.href}
+              onClick={scrollToTop}
               className={cn(
                 "px-3 py-2 text-sm font-medium rounded-md transition-colors",
                 location.pathname === link.href
@@ -84,7 +89,10 @@ export function Header() {
               <Link
                 key={link.href}
                 to={link.href}
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsOpen(false);
+                  scrollToTop();
+                }}
                 className={cn(
                   "px-4 py-2 text-sm font-medium rounded-md transition-colors",
                   location.pathname === link.href

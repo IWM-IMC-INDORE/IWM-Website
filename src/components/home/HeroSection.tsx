@@ -4,7 +4,7 @@ import { ArrowRight, Users, Building2, Award, Calendar } from "lucide-react";
 import CountUp from "@/components/ui/countup";
 
 const stats = [
-  { label: "Interns Trained", value: "2,500+", icon: Users, end: 2500, suffix: "+" },
+  { label: "Interns Trained", value: "1,800+", icon: Users, end: 1800, suffix: "+" },
   { label: "Departments", value: "12", icon: Building2, end: 12, suffix: "" },
   { label: "Batches", value: "7+", icon: Calendar, end: 7, suffix: "+" },
 ];
