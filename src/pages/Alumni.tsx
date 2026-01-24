@@ -142,18 +142,18 @@ const Alumni = () => {
 
                   <div className="p-6 space-y-4">
                     <div className="flex items-start gap-3">
-                      <Briefcase className="w-5 h-5 text-emerald-600 mt-0.5" />
+                      <GraduationCap className="w-5 h-5 text-primary mt-0.5" />
                       <div>
-                        <p className="text-xs text-muted-foreground">Current Role</p>
-                        <p className="font-medium text-foreground">{alum.currentRole}</p>
+                        <p className="text-xs text-muted-foreground">Internship Department</p>
+                        <p className="font-medium text-foreground">{alum.department}</p>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-3">
-                      <GraduationCap className="w-5 h-5 text-primary mt-0.5" />
+                      <Briefcase className="w-5 h-5 text-emerald-600 mt-0.5" />
                       <div>
-                        <p className="text-xs text-muted-foreground">Department</p>
-                        <p className="font-medium text-foreground">{alum.department}</p>
+                        <p className="text-xs text-muted-foreground">Current Role</p>
+                        <p className="font-medium text-foreground">{alum.currentRole}</p>
                       </div>
                     </div>
 
