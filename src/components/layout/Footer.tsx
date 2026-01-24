@@ -112,9 +112,13 @@ export function Footer() {
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} Indore Municipal Corporation. All rights reserved.
           </p>
-           <p className="text-xs text-muted-foreground text-center">
-          Designed and developed by <a href="https://www.linkedin.com/in/asit-parth-07b3b31b3/" className="hover:text-foreground transition-colors">IWM interns</a>
-        </p>
+          <Link 
+            to="/developer" 
+            onClick={scrollToTop} 
+            className="text-xs text-muted-foreground hover:text-civic-green transition-colors group"
+          >
+            Designed and developed by <span className="font-semibold group-hover:underline">IWM interns</span>
+          </Link>
           <div className="flex gap-4 text-xs text-muted-foreground">
             <Link to="/privacy" onClick={scrollToTop} className="hover:text-foreground transition-colors">Privacy Policy</Link>
             <Link to="/terms" onClick={scrollToTop} className="hover:text-foreground transition-colors">Terms of Service</Link>

@@ -10,7 +10,7 @@ import Contact from "./pages/Contact";
 import Alumni from "./pages/Alumni";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
-import NotFound from "./pages/NotFound";
+import Developer from "./pages/Developer";
 
 const queryClient = new QueryClient();
 
@@ -28,8 +28,7 @@ const App = () => (
           <Route path="/alumni" element={<Alumni />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+          <Route path="/Developer" element={<Developer />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
