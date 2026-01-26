@@ -38,7 +38,7 @@ const teamMembers = [
     description: "Crafted beautiful UI/UX and compelling content strategy",
     photo: "https://res.cloudinary.com/dvneefjpi/image/upload/v1769454671/Parth_Developer_at4nvb.jpg",
     github: "https://github.com/parthjoshi1106",
-    linkedin: "www.linkedin.com/in/parth-joshi-530aaa337",
+    linkedin: "https://www.linkedin.com/in/parth-joshi-530aaa337/",
     gradient: "from-amber-500 to-orange-500"
   },
   {
