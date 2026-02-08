@@ -45,7 +45,7 @@ const teamMembers = [
     name: "Uthkarsh Mandloi",
     role: "Frontend Development & Bug Fixing",
     description: "Built core features and ensured smooth user experience",
-    photo: "https://api.dicebear.com/7.x/avataaars/svg?seed=Utkarsh",
+    photo: "https://res.cloudinary.com/dvneefjpi/image/upload/v1770100524/IMG_20250826_173452_ngsvl2.jpg",
     github: "https://github.com/UthkarshMandloi",
     linkedin: "https://www.linkedin.com/in/uthkarsh-mandloi-257531328/",
     gradient: "from-blue-500 to-cyan-500"
@@ -70,18 +70,18 @@ export default function Developer() {
 
       <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted/20">
         {/* Hero Section */}
-        <section className="container py-20">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
+        <section className="container py-14 md:py-20">
+          <div className="max-w-4xl mx-auto text-center space-y-5 md:space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-br from-primary via-primary/95 to-emerald-800 text-white text-sm font-medium mb-4">
               <Sparkles className="h-4 w-4" />
               <span>Built with passion by IWM Interns</span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
               Meet Our Development Team
             </h1>
 
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
               This platform was designed and developed by talented interns from the Internship with Mayor program,
               showcasing innovation and dedication to public service.
             </p>
@@ -89,37 +89,37 @@ export default function Developer() {
         </section>
 
         {/* Interactive Cards Section */}
-        <section className="container pb-32 pt-12">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <section className="container pb-20 md:pb-32 pt-8 md:pt-12">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-start lg:items-center">
             {/* Left Content */}
-            <div className="space-y-8">
+            <div className="space-y-6 md:space-y-8">
               <div className="space-y-4">
                 <div className="flex items-center gap-2 text-civic-green">
                   <Users className="h-6 w-6" />
                   <span className="font-semibold">Collaborative Innovation</span>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
                   Transforming Ideas into Reality
                 </h2>
-                <p className="text-lg text-muted-foreground">
+                <p className="text-base sm:text-lg text-muted-foreground">
                   Our team of passionate interns worked together to create this platform,
                   combining modern web technologies with thoughtful design to serve the
                   citizens of Indore.
                 </p>
               </div>
 
-              <div className="grid gap-4">
+              <div className="grid gap-3 sm:gap-4">
                 {teamMembers.map((member, idx) => (
                   <div
                     key={idx}
-                    className={`group p-4 rounded-lg border bg-card transition-all duration-300 cursor-pointer transform hover:scale-[1.02] ${selectedCard === idx
+                    className={`group p-3 sm:p-4 rounded-lg border bg-card transition-all duration-300 cursor-pointer transform hover:scale-[1.02] ${selectedCard === idx
                       ? 'border-civic-green shadow-lg shadow-civic-green/10 bg-card/80 ring-1 ring-civic-green'
                       : 'border-border hover:border-civic-green hover:shadow-lg hover:shadow-civic-green/10 hover:bg-card/80'
                       }`}
                     onClick={() => handleCardClick(idx)}
                   >
-                    <div className="flex items-start gap-4">
-                      <div className={`w-14 h-14 rounded-full bg-gradient-to-br ${member.gradient} p-0.5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6`}>
+                    <div className="flex items-start gap-3 sm:gap-4">
+                      <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br ${member.gradient} p-0.5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6`}>
                         <img
                           src={member.photo}
                           alt={member.name}
@@ -127,21 +127,49 @@ export default function Developer() {
                         />
                       </div>
                       <div className="flex-1">
-                        <h3 className={`font-semibold text-lg transition-colors ${selectedCard === idx ? 'text-civic-green' : 'group-hover:text-civic-green'
+                        <h3 className={`font-semibold text-base sm:text-lg transition-colors ${selectedCard === idx ? 'text-civic-green' : 'group-hover:text-civic-green'
                           }`}>
                           {member.name}
                         </h3>
-                        <p className="text-sm text-civic-green">{member.role}</p>
-                        <p className="text-sm text-muted-foreground mt-1">{member.description}</p>
+                        <p className="text-xs sm:text-sm text-civic-green">{member.role}</p>
+                        <p className="text-xs sm:text-sm text-muted-foreground mt-1">{member.description}</p>
+
+                        <div
+                          className={`mt-3 flex flex-wrap gap-2 transition-opacity ${selectedCard === idx
+                            ? 'opacity-100'
+                            : 'opacity-0 group-hover:opacity-100'
+                            }`}
+                        >
+                          <a
+                            href={member.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-muted hover:bg-muted/80 text-xs"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            <Github className="h-4 w-4" />
+                            GitHub
+                          </a>
+                          <a
+                            href={member.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-blue-600 hover:bg-blue-500 text-xs text-white"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            <Linkedin className="h-4 w-4" />
+                            LinkedIn
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="flex items-center gap-3 p-4 rounded-lg bg-civic-green/10 border border-civic-green/20">
+              <div className="flex items-center gap-3 p-3 sm:p-4 rounded-lg bg-civic-green/10 border border-civic-green/20">
                 <Code2 className="h-5 w-5 text-civic-green" />
-                <div className="text-sm">
+                <div className="text-xs sm:text-sm">
                   <p className="font-medium text-foreground">Technologies Used</p>
                   <p className="text-muted-foreground">React, TypeScript, Tailwind CSS, GSAP, Sanity CMS</p>
                 </div>
@@ -149,7 +177,7 @@ export default function Developer() {
             </div>
 
             {/* Right - Card Swap Animation */}
-            <div className="relative min-h-[500px] lg:min-h-[600px]">
+            <div className="relative min-h-[340px] sm:min-h-[420px] lg:min-h-[600px] hidden lg:block">
               <CardSwap
                 ref={cardSwapRef}
                 width={600}
@@ -247,10 +275,10 @@ export default function Developer() {
         </section>
 
         {/* Acknowledgment Section */}
-        <section className="container pb-20">
-          <div className="max-w-3xl mx-auto text-center p-8 rounded-2xl bg-card border border-border">
-            <h2 className="text-2xl font-bold mb-4">A Learning Journey</h2>
-            <p className="text-muted-foreground mb-6">
+        <section className="container pb-16 sm:pb-20">
+          <div className="max-w-3xl mx-auto text-center p-6 sm:p-8 rounded-2xl bg-card border border-border">
+            <h2 className="text-xl sm:text-2xl font-bold mb-4">A Learning Journey</h2>
+            <p className="text-sm sm:text-base text-muted-foreground mb-6">
               This project represents the culmination of our internship experience with the
               Indore Municipal Corporation. We're grateful for the opportunity to contribute
               to digital governance while developing our skills in real-world scenarios.
