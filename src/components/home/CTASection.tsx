@@ -65,7 +65,7 @@ export function CTASection() {
           <div className="text-center">
             <Link to="https://docs.google.com/forms/d/e/1FAIpQLSevZtptEtkpNbml4wzx4pvY5TtRDEJ3pBgIWhqZJSwJk9v75w/viewform" target="_blank" >
               <Button variant="hero" size="xl" className="group">
-                Start Your Application
+                Apply Now
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>

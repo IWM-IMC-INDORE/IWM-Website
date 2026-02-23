@@ -34,9 +34,9 @@ const departments = [
   {
     name: "PR & Journalism",
     description: "Manage public relations, media communication, and civic updates."
-  }, 
+  },
   {
-    name: "Public Works Department",
+    name: "PWD & Civil",
     description: "Oversee infrastructure development, road construction, and city planning."
   },
   {

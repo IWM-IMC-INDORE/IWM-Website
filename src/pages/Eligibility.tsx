@@ -92,7 +92,7 @@ const Eligibility = () => {
         <div className="container relative z-20">
           <h1 className="text-4xl font-bold text-white mb-4">Eligibility & FAQ</h1>
           <p className="text-lg text-white/80 max-w-2xl">
-            Check if you're eligible for the IWM program and find answers to commonly asked questions.
+            Check if you're eligible for the IWM program and find answers to frequently asked questions.
           </p>
         </div>
       </section>

@@ -13,7 +13,7 @@ const features = [
   },
   {
     icon: BookOpen,
-    title: "Motivational and Awaereness Sessions",
+    title: "Motivational and Awareness Sessions",
     description: "Exclusive masterclasses on entrepreneurship, personality development, and high-impact resume building.",
   },
   {

@@ -23,15 +23,15 @@ export function MayorsVisionSection() {
                         <div className="relative">
                             <span className="absolute -top-6 -left-4 text-7xl text-primary/20 font-serif leading-none">"</span>
                             <blockquote className="relative z-10 text-lg md:text-xl text-slate-200 leading-relaxed pl-6 border-l-4 border-emerald-500/50 italic">
-                                The youth of Indore are the architects of its future. Internship with Mayor is not just a program; it's a platform for young minds to engage with governance, understand civic challenges, and contribute to the development of our beloved city. Together, let's build an Indore that is not only clean but also smart, sustainable, and inclusive.
+                                "The youth of Indore are the architects of its future. The Internship with Mayor program is not merely an initiative, but a platform that enables young minds to actively engage with governance, gain firsthand understanding of civic challenges, and contribute meaningfully to the development of our city. Together, we strive to build an Indore that is not only clean, but also smart, sustainable, and inclusive."
                             </blockquote>
                         </div>
 
                         <div className="flex items-center gap-4 pt-4">
                             <div className="h-12 w-1 bg-gradient-to-b from-emerald-500 to-transparent rounded-full" />
                             <div>
-                                <h3 className="text-2xl font-bold text-white">Shri Pushyamitra Bhargav</h3>
-                                <p className="text-emerald-400 font-medium tracking-wide">Mayor, Indore Municipal Corporation</p>
+                                <h3 className="text-2xl font-bold text-white">Pushyamitra Bhargav</h3>
+                                <p className="text-emerald-400 font-medium tracking-wide">Mayor, Indore</p>
 
                                 {/* Social Media Links */}
                                 <div className="flex items-center gap-4 mt-3">

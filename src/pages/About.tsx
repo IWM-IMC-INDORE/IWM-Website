@@ -90,7 +90,7 @@ const About = () => {
                 Empowering Youth for Public Service
               </h2>
               <p className="text-muted-foreground mb-6">
-                The IWM program was conceived to create a bridge between aspiring young professionals and the complex world of municipal governance. Under the visionary leadership of the Mayor and IMC Commissioner, this initiative transforms interns into future civic leaders.
+                The IWM program was conceived to create a bridge between aspiring young professionals and the complex world of municipal governance. Under the visionary leadership of the Mayor, this initiative transforms interns into future civic leaders.
               </p>
               <p className="text-muted-foreground">
                 Each batch works on real projects across 12 departments, gaining invaluable experience while contributing meaningfully to the development of Indore – consistently ranked as India's cleanest city.

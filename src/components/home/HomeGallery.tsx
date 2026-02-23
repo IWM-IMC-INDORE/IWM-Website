@@ -46,7 +46,7 @@ export function HomeGallery() {
       <div className="container px-4 md:px-6">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold tracking-tighter text-primary">
-            Life at IWM
+            Glimpses of the Internship
           </h2>
           <p className="text-muted-foreground mt-2 text-lg">
             Glimpses from our previous cohorts and field visits
