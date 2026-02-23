@@ -33,24 +33,24 @@ const contactInfo = [
     details: ["+91 88396 35194", "+91 7440445051"],
     link: "tel:+918839635194",
   },
-  {
-    icon: Clock,
-    title: "Office Hours",
-    details: ["Mon - Sat: 10:00 AM - 5:30 PM", "Sunday: Closed"],
-    link: null,
-  },
+  // {
+  //   icon: Clock,
+  //   title: "Office Hours",
+  //   details: ["Mon - Sat: 10:00 AM - 5:30 PM", "Sunday: Closed"],
+  //   link: null,
+  // },
   {
     icon: Instagram,
     title: "Instagram",
     details: ["@internshipwithmayor.indore"],
     link: "https://www.instagram.com/internshipwithmayor.indore/",
   },
-  {
-    icon: Linkedin,
-    title: "LinkedIn",
-    details: ["Internship with Mayor"],
-    link: "https://www.linkedin.com/company/internship-with-mayor-indore/",
-  },
+  // {
+  //   icon: Linkedin,
+  //   title: "LinkedIn",
+  //   details: ["Internship with Mayor"],
+  //   link: "https://www.linkedin.com/company/internship-with-mayor-indore/",
+  // },
 ];
 
 const Contact = () => {
