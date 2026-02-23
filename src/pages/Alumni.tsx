@@ -61,7 +61,7 @@ const Alumni = () => {
       <SEO
         title="Alumni Network"
         description="Meet the IWM Alumni Network. Stories of interns who have worked on real civic projects and moved on to impactful careers."
-        url="https://iwmindore.gov.in/alumni"
+        url="https://iwmimcindore.com/alumni"
       />
       {/* Hero Section */}
       {/* Hero Section */}
@@ -92,24 +92,7 @@ const Alumni = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-12 bg-background">
-        <div className="container">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 -mt-20 relative z-20">
-            {[
-              { label: "Total Alumni", value: "1,800+" },
-              { label: "Placed in Govt. Jobs", value: "350+" },
-              { label: "Entrepreneurs", value: "120+" },
-              { label: "Higher Education", value: "800+" },
-            ].map((stat) => (
-              <div key={stat.label} className="bg-card rounded-xl p-6 shadow-lg border border-border text-center">
-                <p className="text-3xl font-bold text-primary mb-1">{stat.value}</p>
-                <p className="text-sm text-muted-foreground">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* Alumni Grid Section */}
       <section className="py-16 bg-background">

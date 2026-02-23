@@ -13,7 +13,7 @@ const Index = () => {
     <PublicLayout>
       <SEO
         title="Home"
-        url="https://iwmindore.gov.in/"
+        url="https://iwmimcindore.com/"
       />
       <HeroSection />
       <MayorsVisionSection />

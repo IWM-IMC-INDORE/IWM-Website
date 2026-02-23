@@ -25,7 +25,7 @@ const About = () => {
       <SEO
         title="About Us"
         description="Learn about the Internship with Mayor (IWM) program, its vision, objectives, and the 40-45 day journey transforming youth into civic leaders."
-        url="https://iwmindore.gov.in/about"
+        url="https://iwmimcindore.com/about"
       />
       {/* Hero Section */}
       <section className="min-h-[45vh] md:min-h-[60vh] py-20 relative overflow-hidden flex items-center">

@@ -71,7 +71,7 @@ const Eligibility = () => {
       <SEO
         title="Eligibility & FAQ"
         description="Check eligibility criteria for the IWM program. Open to Indian citizens 18+ with a diploma/degree. Find answers to common questions."
-        url="https://iwmindore.gov.in/eligibility"
+        url="https://iwmimcindore.com/eligibility"
       />
       {/* Hero */}
       <section className="min-h-[45vh] md:min-h-[60vh] py-20 relative overflow-hidden flex items-center">

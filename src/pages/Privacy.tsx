@@ -5,12 +5,12 @@ import { Shield } from "lucide-react";
 const Privacy = () => {
   return (
     <PublicLayout>
-      <SEO 
-        title="Privacy Policy" 
+      <SEO
+        title="Privacy Policy"
         description="Privacy Policy for Internship with Mayor program by Indore Municipal Corporation"
-        url="https://iwmindore.gov.in/privacy"
+        url="https://iwmimcindore.com/privacy"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-b from-background to-muted/20 py-16">
         <div className="container max-w-4xl">
           <div className="bg-card rounded-2xl shadow-lg border border-border p-8 md:p-12">

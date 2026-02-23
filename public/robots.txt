@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://iwmindore.gov.in/sitemap.xml
+Sitemap: https://iwmimcindore.com/sitemap.xml

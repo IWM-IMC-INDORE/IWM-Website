@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://iwmindore.gov.in/</loc>
+    <loc>https://iwmimcindore.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://iwmindore.gov.in/about</loc>
+    <loc>https://iwmimcindore.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://iwmindore.gov.in/eligibility</loc>
+    <loc>https://iwmimcindore.com/eligibility</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://iwmindore.gov.in/alumni</loc>
+    <loc>https://iwmimcindore.com/alumni</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://iwmindore.gov.in/contact</loc>
+    <loc>https://iwmimcindore.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://iwmindore.gov.in/privacy</loc>
+    <loc>https://iwmimcindore.com/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://iwmindore.gov.in/terms</loc>
+    <loc>https://iwmimcindore.com/terms</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://iwmindore.gov.in/developer</loc>
+    <loc>https://iwmimcindore.com/developer</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

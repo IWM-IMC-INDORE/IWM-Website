@@ -59,7 +59,7 @@ const Contact = () => {
       <SEO
         title="Contact Us"
         description="Get in touch with the IWM team. Visit our office at Indore Municipal Corporation or check our AICTSL and Smart City office locations."
-        url="https://iwmindore.gov.in/contact"
+        url="https://iwmimcindore.com/contact"
       />
       {/* Hero */}
       <section className="min-h-[45vh] md:min-h-[60vh] py-20 relative overflow-hidden flex items-center">

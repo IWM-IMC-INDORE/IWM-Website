@@ -66,6 +66,7 @@ export default function Developer() {
       <SEO
         title="Our Team | IWM"
         description="Meet the talented IWM interns who designed and developed this platform"
+        url="https://iwmimcindore.com/developer"
       />
 
       <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted/20">
