@@ -11,6 +11,7 @@ import Alumni from "./pages/Alumni";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Developer from "./pages/Developer";
+import PastSessions from "./pages/PastSessions";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/developer" element={<Developer />} />
+          <Route path="/sessions" element={<PastSessions />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

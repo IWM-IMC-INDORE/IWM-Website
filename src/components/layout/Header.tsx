@@ -9,6 +9,7 @@ const navLinks = [
   { href: "/about", label: "About IWM" },
   { href: "/eligibility", label: "Eligibility" },
   { href: "/alumni", label: "Alumni" },
+  { href: "/sessions", label: "Past Sessions" },
   // { href: "/projects", label: "Projects" },
   { href: "/contact", label: "Contact" },
 ];
