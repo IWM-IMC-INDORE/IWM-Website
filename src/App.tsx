@@ -12,6 +12,7 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Developer from "./pages/Developer";
 import PastSessions from "./pages/PastSessions";
+import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/terms" element={<Terms />} />
           <Route path="/developer" element={<Developer />} />
           <Route path="/sessions" element={<PastSessions />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

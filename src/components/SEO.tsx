@@ -7,29 +7,40 @@ interface SEOProps {
     image?: string;
     url?: string;
     type?: 'website' | 'article';
+    noIndex?: boolean;
 }
+
+const SITE_NAME = "IWM Portal - Internship with Mayor, Indore";
+const SITE_URL = "https://iwmimcindore.com";
+
+const toAbsoluteUrl = (value: string) => {
+    if (/^https?:\/\//i.test(value)) {
+        return value;
+    }
+    return new URL(value, SITE_URL).toString();
+};
 
 export const SEO = ({
     title,
     description = "Join India's flagship civic internship program. Work with the Indore Municipal Corporation across 12 departments and gain hands-on experience in urban governance.",
     keywords = "IWM, iwm indore, Internship with Mayor, Indore Municipal Corporation, civic internship, government internship, Indore",
     image = "/iwm-logo.png",
-    url = "https://iwmconnect.vercel.app",
-    type = 'website'
+    url = "/",
+    type = 'website',
+    noIndex = false,
 }: SEOProps) => {
-    const siteTitle = "IWM Portal - Internship with Mayor, Indore";
-    const fullTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
+    const fullTitle = title === SITE_NAME ? title : `${title} | ${SITE_NAME}`;
+    const canonicalUrl = toAbsoluteUrl(url);
+    const imageUrl = toAbsoluteUrl(image);
+    const robotsContent = noIndex ? "noindex, nofollow" : "index, follow";
 
-    // JSON-LD Structured Data
-    const structuredData = {
+    const organizationStructuredData = {
         "@context": "https://schema.org",
         "@type": "GovernmentOrganization",
         "name": "Indore Municipal Corporation",
-        "url": "https://iwmconnect.vercel.app",
-        "logo": "https://iwmconnect.vercel.app/iwm-logo.png",
+        "url": SITE_URL,
+        "logo": toAbsoluteUrl("/iwm-logo.png"),
         "sameAs": [
-            // "https://www.facebook.com/IndoreMunicipalCorporation",
-            // "https://twitter.com/IndoreMunicipal",
             "https://www.instagram.com/internshipwithmayor.indore/"
         ],
         "contactPoint": {
@@ -41,31 +52,40 @@ export const SEO = ({
         }
     };
 
+    const websiteStructuredData = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": SITE_NAME,
+        "url": SITE_URL,
+        "inLanguage": "en-IN"
+    };
+
     return (
         <Helmet>
-            {/* Basic Meta Tags */}
             <title>{fullTitle}</title>
             <meta name="description" content={description} />
             <meta name="keywords" content={keywords} />
-            <link rel="canonical" href={url} />
+            <meta name="robots" content={robotsContent} />
+            <link rel="canonical" href={canonicalUrl} />
 
-            {/* Open Graph / Facebook */}
             <meta property="og:type" content={type} />
             <meta property="og:title" content={fullTitle} />
             <meta property="og:description" content={description} />
-            <meta property="og:image" content={image} />
-            <meta property="og:url" content={url} />
-            <meta property="og:site_name" content={siteTitle} />
+            <meta property="og:image" content={imageUrl} />
+            <meta property="og:url" content={canonicalUrl} />
+            <meta property="og:site_name" content={SITE_NAME} />
+            <meta property="og:locale" content="en_IN" />
 
-            {/* Twitter */}
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content={fullTitle} />
             <meta name="twitter:description" content={description} />
-            <meta name="twitter:image" content={image} />
+            <meta name="twitter:image" content={imageUrl} />
 
-            {/* Structured Data */}
             <script type="application/ld+json">
-                {JSON.stringify(structuredData)}
+                {JSON.stringify(organizationStructuredData)}
+            </script>
+            <script type="application/ld+json">
+                {JSON.stringify(websiteStructuredData)}
             </script>
         </Helmet>
     );
