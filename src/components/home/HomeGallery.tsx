@@ -23,9 +23,10 @@ const galleryImages = [
     alt: "Team presentation session"
   },
   {
-    src: "https://res.cloudinary.com/dvneefjpi/image/upload/v1768982089/IMG-20260114-WA0089_di3f2n.jpg",
+    src: "https://res.cloudinary.com/dvneefjpi/image/upload/v1772216781/enhanced_cyber_5_d5z05f.png",
     alt: "Group photo"
   },
+
   {
     src: "https://res.cloudinary.com/dvneefjpi/image/upload/v1772177046/When_young_minds_meet_visionary_leadership_amilrw.jpg",
     alt: "Group photo"
@@ -37,6 +38,10 @@ const galleryImages = [
   {
     src: "https://res.cloudinary.com/dvneefjpi/image/upload/v1768370653/PXL_20251130_075041052.RAW-01.COVER_v8ggj9.jpg",
     alt: "Group photo "
+  },
+  {
+    src: "https://res.cloudinary.com/dvneefjpi/image/upload/v1768982089/IMG-20260114-WA0089_di3f2n.jpg",
+    alt: "Group photo"
   },
 ];
 

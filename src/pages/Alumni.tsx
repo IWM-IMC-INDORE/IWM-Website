@@ -28,6 +28,8 @@ const Alumni = () => {
   const [alumni, setAlumni] = useState<AlumniData[]>([]);
   // 2. State to handle the loading status
   const [isLoading, setIsLoading] = useState(true);
+  // 3. State to handle how many items to show initially
+  const [visibleCount, setVisibleCount] = useState(6);
 
   // 3. Fetch data when the page loads
   useEffect(() => {
@@ -55,6 +57,10 @@ const Alumni = () => {
 
     fetchAlumni();
   }, []);
+
+  const handleLoadMore = () => {
+    setVisibleCount((prevCount) => prevCount + 6);
+  };
 
   return (
     <PublicLayout>
@@ -105,48 +111,61 @@ const Alumni = () => {
               <p>Loading alumni stories...</p>
             </div>
           ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {alumni.map((alum) => (
-                <div
-                  key={alum._id}
-                  className="bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-shadow"
+            <div className="flex flex-col items-center">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+                {alumni.slice(0, visibleCount).map((alum) => (
+                  <div
+                    key={alum._id}
+                    className="bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-shadow flex flex-col h-full"
+                  >
+                    <div className="bg-gradient-to-r from-primary to-emerald-700 p-6 flex-shrink-0">
+                      <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-2xl mb-4 overflow-hidden">
+                        {alum.profileImage?.asset ? (
+                          <img src={urlFor(alum.profileImage.asset)} alt={alum.name} className="w-full h-full object-cover" />
+                        ) : (
+                          alum.name?.charAt(0) || "A"
+                        )}
+                      </div>
+                      <h3 className="text-xl font-bold text-white">{alum.name}</h3>
+                      <p className="text-white/80 text-sm">IWM Batch {alum.batch}</p>
+                    </div>
+
+                    <div className="p-6 space-y-4 flex-grow flex flex-col">
+                      <div className="flex items-start gap-3">
+                        <GraduationCap className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                        <div>
+                          <p className="text-xs text-muted-foreground">Internship Department</p>
+                          <p className="font-medium text-foreground">{alum.department}</p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-3">
+                        <Briefcase className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <p className="text-xs text-muted-foreground">Current Role</p>
+                          <p className="font-medium text-foreground">{alum.currentRole}</p>
+                        </div>
+                      </div>
+
+                      <div className="pt-4 border-t border-border mt-auto h-full flex flex-col">
+                        <Quote className="w-6 h-6 text-primary/20 mb-2 flex-shrink-0" />
+                        <p className="text-sm text-muted-foreground italic flex-grow">"{alum.testimonial}"</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {visibleCount < alumni.length && (
+                <Button
+                  onClick={handleLoadMore}
+                  variant="hero"
+                  size="lg"
+                  className="mt-10 group"
                 >
-                  <div className="bg-gradient-to-r from-primary to-emerald-700 p-6">
-                    <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-2xl mb-4 overflow-hidden">
-                      {alum.profileImage?.asset ? (
-                        <img src={urlFor(alum.profileImage.asset)} alt={alum.name} className="w-full h-full object-cover" />
-                      ) : (
-                        alum.name?.charAt(0) || "A"
-                      )}
-                    </div>
-                    <h3 className="text-xl font-bold text-white">{alum.name}</h3>
-                    <p className="text-white/80 text-sm">IWM Batch {alum.batch}</p>
-                  </div>
-
-                  <div className="p-6 space-y-4">
-                    <div className="flex items-start gap-3">
-                      <GraduationCap className="w-5 h-5 text-primary mt-0.5" />
-                      <div>
-                        <p className="text-xs text-muted-foreground">Internship Department</p>
-                        <p className="font-medium text-foreground">{alum.department}</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <Briefcase className="w-5 h-5 text-emerald-600 mt-0.5" />
-                      <div>
-                        <p className="text-xs text-muted-foreground">Current Role</p>
-                        <p className="font-medium text-foreground">{alum.currentRole}</p>
-                      </div>
-                    </div>
-
-                    <div className="pt-4 border-t border-border">
-                      <Quote className="w-6 h-6 text-primary/20 mb-2" />
-                      <p className="text-sm text-muted-foreground italic">"{alum.testimonial}"</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
+                  Read More
+                </Button>
+              )}
             </div>
           )}
         </div>

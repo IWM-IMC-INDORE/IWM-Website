@@ -1,116 +1,160 @@
-import { type MouseEvent, useEffect, useMemo, useState } from "react";
+import { type MouseEvent, useEffect, useState, useMemo } from "react";
 import { PublicLayout } from "@/components/layout/PublicLayout";
 import { SEO } from "@/components/SEO";
 
 const sessionsSeed = [
   {
-    id: "session-urban-mobility",
-    title: "Urban Mobility Sprint",
-    date: "Jan 18, 2025",
-    location: "IMC Conference Hall",
-    theme: "Mobility & Infrastructure",
+    id: "session-cyber-awareness",
+    title: "Cyber Awareness Session",
+    date: "Feb 10, 2026",
+    location: "AICTSL Conference Hall, Geeta Bhawan",
+    theme: "Cyber Safety & Digital Awareness",
     summary:
-      "Participants mapped commuter pain points and proposed last-mile upgrades with phased rollout budgets.",
+      "A cyber awareness initiative aimed at educating Gen Z, Millennials, and Baby Boomers about online frauds, digital scams, cyber safety practices, and responsible internet usage for a safer digital future.",
     highlights: [
-      "Top 3 transit bottlenecks identified",
-      "Prototype for smart bus stop UX",
-      "Budget-ready action matrix",
+      "Awareness on online frauds and digital scams",
+      "Guidance on cyber safety and responsible internet use",
+      "Interactive session with law enforcement and legal experts",
     ],
-    speakers: ["Anita Rao", "Dr. Kunal Sharma"],
+    speakers: [
+      "Mr. Rajesh Dhandotiya (DCP Crime Branch)",
+      "Adv. Rohit Jain (Cyber Mitra)"
+    ],
+    sliderSet: [
+      "https://res.cloudinary.com/dvneefjpi/image/upload/v1772216395/enhanced_cyber_2_w0hnoi.png",
+      "https://res.cloudinary.com/dvneefjpi/image/upload/v1772216396/enhanced_cyber_3_fqklsm.png",
+      "https://res.cloudinary.com/dvneefjpi/image/upload/v1772216781/enhanced_cyber_5_d5z05f.png",
+    ],
   },
   {
-    id: "session-green-corridors",
-    title: "Green Corridors Lab",
-    date: "Feb 22, 2025",
-    location: "Smart City Studio",
-    theme: "Sustainability",
+    id: "session-traffic-discipline-civic-sense",
+    title: "Role of Youth in Traffic Discipline & Civic Sense",
+    date: "Jan 25, 2026",
+    location: "AICTSL Conference Hall & Rajwada Chowk",
+    theme: "Civic Responsibility & Traffic Awareness",
     summary:
-      "Teams designed a green corridor blueprint focused on micro-parks, shade cover, and stormwater capture.",
+      "An expert session and traffic volunteering initiative aimed at encouraging youth participation in traffic discipline, civic responsibility, and responsible citizenship under the Internship with Mayor Program.",
     highlights: [
-      "Heat map analysis for 6 zones",
-      "Tree canopy increase plan",
-      "Community stewardship toolkit",
+      "Awareness on traffic discipline and civic sense",
+      "Interactive session with Indore Police officials",
+      "On-ground traffic volunteering campaign at Rajwada Chowk",
     ],
-    speakers: ["Priya Nair", "Aditya Mehta"],
+    speakers: [
+      "ACP Lal Bahadur",
+      "Mrs. Shubhi Jain (Traffic Warden)"
+
+    ],
+    sliderSet: [
+      "https://res.cloudinary.com/dvneefjpi/image/upload/v1772219900/traffic_3_dap41a.png",
+      "https://res.cloudinary.com/dvneefjpi/image/upload/v1772173500/enhanced_traffic_session_tzaztr.jpg",
+      "https://res.cloudinary.com/dvneefjpi/image/upload/v1772219901/traffic_4_kq2amm.png",
+    ],
   },
   {
-    id: "session-digital-civic",
-    title: "Digital Civic Services",
-    date: "Mar 12, 2025",
-    location: "Innovation Hub",
-    theme: "Digital Governance",
+    id: "session-art-of-entrepreneurship",
+    title: "The Art of Entrepreneurship",
+    date: "Jan 9, 2026",
+    location: "AICTSL Conference Board Room",
+    theme: "Entrepreneurship & Innovation",
     summary:
-      "Focused on service design for permits and grievance redressal with new journey maps and KPIs.",
+      "An expert session focused on developing an entrepreneurial mindset, identifying opportunity gaps, and transforming ideas into impactful ventures through practical insights.",
     highlights: [
-      "End-to-end service blueprint",
-      "KPI tracker for response time",
-      "Low-friction form redesign",
+      "Understanding entrepreneurial mindset",
+      "Gap identification and practical business thinking",
+      "Frameworks like 3D’s and 3S’s for disciplined growth",
     ],
-    speakers: ["Rohit Kulkarni", "Meera Das"],
+    speakers: ["Rahul Bhargav"],
+    sliderSet: [
+      "https://res.cloudinary.com/dvneefjpi/image/upload/v1768982089/IMG-20260114-WA0089_di3f2n.jpg",
+      "https://res.cloudinary.com/dvneefjpi/image/upload/v1772218472/IMG-20260114-WA0093_s6upa7.jpg",
+      "https://res.cloudinary.com/dvneefjpi/image/upload/v1772218471/art_of_2_ybuzz7.png",
+    ],
   },
   {
-    id: "session-cultural-cities",
-    title: "Culture & Public Space",
-    date: "Apr 09, 2025",
-    location: "Rajwada Heritage Walk",
-    theme: "Placemaking",
+    id: "session-personality-development-resume-building",
+    title: "Personality Development & Resume Building",
+    date: "Jan 5, 2026",
+    location: "AICTSL Conference Hall",
+    theme: "Career Development & Professional Skills",
     summary:
-      "Explored how cultural programming activates heritage precincts and supports local businesses.",
+      "An interactive session focused on enhancing personality traits, communication skills, and building impactful resumes to prepare interns for professional opportunities.",
     highlights: [
-      "Festival calendar mockup",
-      "Stakeholder partnership map",
-      "Metrics for footfall growth",
+      "Guidance on professional personality development",
+      "Resume building and career positioning strategies",
+      "Practical insights for interview readiness"
     ],
-    speakers: ["Ayesha Khan", "Vivek Jain"],
+    speakers: [
+      "Pratap Nair"
+    ],
+    sliderSet: [
+      "https://res.cloudinary.com/dvneefjpi/image/upload/v1772221269/development_2_net7fh.png",
+      "https://res.cloudinary.com/dvneefjpi/image/upload/v1772221267/development_4_t0h3d3.jpg",
+      "https://res.cloudinary.com/dvneefjpi/image/upload/v1772221269/development_3_tql5zp.png",
+    ],
+  },
+
+  {
+    id: "visit-bada-rawala-palace",
+    title: "Heritage Visit – Bada Rawala Palace",
+    date: "Nov 30, 2025",
+    location: "Bada Rawala Palace, Juni Indore",
+    theme: "Heritage, Culture & Civic History",
+    summary:
+      "The first day of Batch 7 commenced with a heritage visit to Bada Rawala Palace, offering interns an opportunity to explore Indore’s royal legacy and cultural history while understanding the contributions of Raja Raja Zamindar Nandlal Mandloi.",
+    highlights: [
+      "Learned about Raja Raja Zamindar Nandlal Mandloi",
+      "Explored royal artifacts, vintage cars, and the Raja’s Palki",
+      "Visited the historic royal Darbaar",
+      "Interaction with members of Global Indians Overseas (GOI)",
+      "Met a renowned influencer from Indore"
+    ],
+    speakers: [
+      "Mr. Varadraj Mandloi (Current Heir & Zamindar)"
+    ],
+    sliderSet: [
+      "https://res.cloudinary.com/dvneefjpi/image/upload/v1772222505/rawala_1_bzvpym.png",
+      "https://res.cloudinary.com/dvneefjpi/image/upload/v1772222504/rawala_2_hv3ogl.jpg",
+      "https://res.cloudinary.com/dvneefjpi/image/upload/v1768370653/PXL_20251130_075041052.RAW-01.COVER_v8ggj9.jpg",
+    ],
   },
   {
-    id: "session-waste-to-value",
-    title: "Waste-to-Value Hack",
-    date: "May 05, 2025",
-    location: "City Lab",
-    theme: "Circular Economy",
+    id: "session-mental-health",
+    title: "Upcoming: Mental Health & Well-being",
+    date: "TBA - Upcoming",
+    location: "To Be Announced",
+    theme: "Youth Wellness & Mental Health",
     summary:
-      "Built circular economy proposals for markets, composting nodes, and MSME collaborations.",
+      "Our next upcoming session will focus on the importance of mental health, stress management, and emotional well-being for youth and young professionals.",
     highlights: [
-      "Pilot plan for 3 markets",
-      "Revenue model for compost sales",
-      "MSME engagement playbook",
+      "Open dialogue on mental health challenges",
+      "Expert-led stress management workshops",
+      "Building emotional resilience in an academic and professional environment",
     ],
-    speakers: ["Neha Bansal", "Siddharth Verma"],
-  },
-  {
-    id: "session-safety-design",
-    title: "Safer Streets Studio",
-    date: "Jun 01, 2025",
-    location: "Traffic Control Center",
-    theme: "Public Safety",
-    summary:
-      "Co-created safety improvements with traffic data overlays and citizen feedback loops.",
-    highlights: [
-      "Crash hotspot analysis",
-      "Street lighting audit",
-      "Citizen reporting concept",
+    speakers: ["Guest Speakers (To be announced)"],
+    sliderSet: [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     ],
-    speakers: ["Lt. Arjun Singh", "Swati Patil"],
   },
 ];
 
 const cardBackgrounds = [
-  "https://res.cloudinary.com/dvneefjpi/image/upload/v1767773000/345699526_632234488811167_9193590834147068485_n_iafmbq.jpg",
-  "https://res.cloudinary.com/dvneefjpi/image/upload/v1767773810/ekpedmaakenaam_worldrecord_internshipwithmayorInternship_with_mayor_students_played_an_impact_1_puyqo1.jpg",
-  "https://res.cloudinary.com/dvneefjpi/image/upload/v1767773009/472545215_1669875810576187_2809314555655141950_n_ioro9j.jpg",
+  "https://res.cloudinary.com/dvneefjpi/image/upload/v1772215231/enhanced_cyber_jueh3v.png",
+  "https://res.cloudinary.com/dvneefjpi/image/upload/v1772219901/traffic_4_kq2amm.png",
   "https://res.cloudinary.com/dvneefjpi/image/upload/v1768982089/IMG-20260114-WA0089_di3f2n.jpg",
-  "https://res.cloudinary.com/dvneefjpi/image/upload/v1767773811/ekpedmaakenaam_worldrecord_internshipwithmayorInternship_with_mayor_students_played_an_impact_3_bedyzj.jpg",
-  "https://res.cloudinary.com/dvneefjpi/image/upload/v1768370653/PXL_20251130_075041052.RAW-01.COVER_v8ggj9.jpg",
+  "https://res.cloudinary.com/dvneefjpi/image/upload/v1772221269/development_2_net7fh.png",
+  "https://res.cloudinary.com/dvneefjpi/image/upload/v1772222504/rawala_3_vtosoz.png",
+  "https://res.cloudinary.com/dvneefjpi/image/upload/v1772223317/upcoming_1_te60k2.png",
 ];
 
-const sliderImages = [
-  "https://res.cloudinary.com/dvneefjpi/image/upload/v1767773000/345699526_632234488811167_9193590834147068485_n_iafmbq.jpg",
-  "https://res.cloudinary.com/dvneefjpi/image/upload/v1767773810/ekpedmaakenaam_worldrecord_internshipwithmayorInternship_with_mayor_students_played_an_impact_1_puyqo1.jpg",
-  "https://res.cloudinary.com/dvneefjpi/image/upload/v1767773009/472545215_1669875810576187_2809314555655141950_n_ioro9j.jpg",
-  "https://res.cloudinary.com/dvneefjpi/image/upload/v1768982089/IMG-20260114-WA0089_di3f2n.jpg",
-  "https://res.cloudinary.com/dvneefjpi/image/upload/v1767773811/ekpedmaakenaam_worldrecord_internshipwithmayorInternship_with_mayor_students_played_an_impact_3_bedyzj.jpg",
-  "https://res.cloudinary.com/dvneefjpi/image/upload/v1768370653/PXL_20251130_075041052.RAW-01.COVER_v8ggj9.jpg",
+const modalBackgrounds = [
+  "https://res.cloudinary.com/dvneefjpi/image/upload/v1772216396/enhanced_cyber_4_ttzjon.png",
+  "https://res.cloudinary.com/dvneefjpi/image/upload/v1772219485/traffic_2_vx6i9m.png",
+  "https://res.cloudinary.com/dvneefjpi/image/upload/v1772218472/IMG-20260114-WA0093_s6upa7.jpg",
+  "https://res.cloudinary.com/dvneefjpi/image/upload/v1772221269/development_1_nsyr9d.png",
+  "https://res.cloudinary.com/dvneefjpi/image/upload/v1772222505/rawala_1_bzvpym.png",
+  "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
 ];
 
 type HoverFx = {
@@ -120,29 +164,20 @@ type HoverFx = {
   glareY: number;
 };
 
+const sessions = sessionsSeed.map((session, index) => ({
+  ...session,
+  cardImage: cardBackgrounds[index % cardBackgrounds.length],
+  modalImage: modalBackgrounds[index % modalBackgrounds.length],
+}));
+
 const PastSessions = () => {
   const [activeId, setActiveId] = useState<string | null>(null);
   const [hoverFx, setHoverFx] = useState<Record<string, HoverFx>>({});
-  const [sliderIndex, setSliderIndex] = useState(1);
-  const sessions = useMemo(
-    () =>
-      sessionsSeed.map((session, index) => ({
-        ...session,
-        cardImage: cardBackgrounds[index % cardBackgrounds.length],
-        sliderSet: [
-          sliderImages[index % sliderImages.length],
-          sliderImages[(index + 1) % sliderImages.length],
-          sliderImages[(index + 2) % sliderImages.length],
-        ],
-      })),
-    []
-  );
-  const activeSession = useMemo(
-    () => sessions.find((session) => session.id === activeId) ?? null,
-    [activeId, sessions]
-  );
+
+  const activeSession = sessions.find((session) => session.id === activeId) ?? null;
 
   const toggleCard = (id: string) => {
+    if (id === "session-mental-health") return; // Disabled for upcoming session
     setActiveId((current) => (current === id ? null : id));
   };
 
@@ -195,41 +230,7 @@ const PastSessions = () => {
     };
   }, [activeSession]);
 
-  useEffect(() => {
-    if (!activeSession) {
-      return;
-    }
-
-    setSliderIndex(1);
-  }, [activeSession]);
-
-  useEffect(() => {
-    if (!activeSession) {
-      return;
-    }
-
-    const interval = window.setInterval(() => {
-      setSliderIndex((current) => (current + 1) % activeSession.sliderSet.length);
-    }, 2800);
-
-    return () => window.clearInterval(interval);
-  }, [activeSession]);
-
-  const goToPrevSlide = () => {
-    if (!activeSession) {
-      return;
-    }
-
-    setSliderIndex((current) => (current - 1 + activeSession.sliderSet.length) % activeSession.sliderSet.length);
-  };
-
-  const goToNextSlide = () => {
-    if (!activeSession) {
-      return;
-    }
-
-    setSliderIndex((current) => (current + 1) % activeSession.sliderSet.length);
-  };
+  // Old slider index logic removed
 
   return (
     <PublicLayout>
@@ -340,14 +341,20 @@ const PastSessions = () => {
                           </div>
                           <button
                             type="button"
-                            className="rounded-full border border-white/50 px-3 py-1 text-xs font-semibold text-white/80 transition-colors hover:border-white hover:text-white"
+                            className={`rounded-full border border-white/50 px-3 py-1 text-xs font-semibold text-white/80 transition-colors ${session.id === "session-mental-health"
+                              ? "cursor-default opacity-50"
+                              : "hover:border-white hover:text-white"
+                              }`}
                             onClick={(event) => {
                               event.stopPropagation();
-                              toggleCard(session.id);
+                              if (session.id !== "session-mental-health") {
+                                toggleCard(session.id);
+                              }
                             }}
                             aria-pressed={isFlipped}
+                            disabled={session.id === "session-mental-health"}
                           >
-                            Details
+                            {session.id === "session-mental-health" ? "Upcoming" : "Details"}
                           </button>
                         </div>
                         <div>
@@ -416,106 +423,125 @@ const PastSessions = () => {
 
       {activeSession && (
         <div
-          className="fixed inset-0 z-[200] flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-[200] flex items-center justify-center bg-black/70 p-4 sm:p-6 backdrop-blur-sm"
           onClick={() => setActiveId(null)}
         >
           <div
-            className="relative h-[95vh] w-full max-w-6xl overflow-hidden rounded-3xl border border-white/20 bg-foreground text-background shadow-2xl"
-            style={{
-              backgroundImage: `linear-gradient(to bottom right, rgba(15,23,42,0.95), rgba(17,24,39,0.92), rgba(6,78,59,0.9)), url('${activeSession.cardImage}')`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              animation: "none",
-            }}
+            className="relative flex h-[90vh] w-full max-w-6xl overflow-hidden rounded-2xl bg-[#0B1121] shadow-2xl animate-fade-in"
+            style={{ animationDuration: "0.2s" }}
             onClick={(event) => event.stopPropagation()}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-black/30" />
-            <div className="relative flex h-full flex-col overflow-y-auto p-6 sm:p-8 md:p-10">
-              <button
-                type="button"
-                className="absolute right-6 top-6 rounded-full border border-background/50 px-4 py-2 text-xs font-semibold text-background transition-colors hover:bg-background hover:text-foreground"
-                onClick={() => setActiveId(null)}
-              >
-                Close
-              </button>
+            {/* Close Button */}
+            <button
+              type="button"
+              className="absolute right-4 top-4 z-50 flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 backdrop-blur-md"
+              onClick={() => setActiveId(null)}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
+            </button>
 
-              <div className="mx-auto w-full max-w-4xl text-center">
-                <div>
-                  <p className="text-xs font-semibold tracking-[0.3em] text-background/70">
-                    SESSION DETAILS
-                  </p>
-                  <h3 className="mt-3 text-3xl font-semibold sm:text-4xl">{activeSession.title}</h3>
-                  <p className="mt-3 text-sm text-background/75 sm:text-base">
-                    {activeSession.date} · {activeSession.location}
-                  </p>
+            <div className="flex h-full w-full flex-col lg:flex-row">
+              {/* Left Column (Sticky Image & Title) */}
+              <div className="relative h-64 w-full shrink-0 lg:h-full lg:w-[45%]">
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{ backgroundImage: `url('${activeSession.modalImage}')` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1121] via-[#0B1121]/50 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-[#0B1121]/50 lg:to-[#0B1121]" />
 
-                  <div className="mt-6 overflow-hidden rounded-2xl border border-white/20 bg-white/5 py-4 backdrop-blur-sm">
-                    <div className="mx-auto flex w-[130%] -translate-x-[15%] items-center justify-center gap-3 sm:gap-4">
-                      <div className="h-32 w-1/3 overflow-hidden rounded-xl opacity-80 sm:h-40">
-                        <img
-                          src={activeSession.sliderSet[(sliderIndex - 1 + activeSession.sliderSet.length) % activeSession.sliderSet.length]}
-                          alt={`${activeSession.title} preview 1`}
-                          className="h-full w-full object-cover"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div className="h-40 w-1/2 overflow-hidden rounded-xl ring-2 ring-white/40 sm:h-52">
-                        <img
-                          src={activeSession.sliderSet[sliderIndex]}
-                          alt={`${activeSession.title} preview 2`}
-                          className="h-full w-full object-cover"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div className="h-32 w-1/3 overflow-hidden rounded-xl opacity-80 sm:h-40">
-                        <img
-                          src={activeSession.sliderSet[(sliderIndex + 1) % activeSession.sliderSet.length]}
-                          alt={`${activeSession.title} preview 3`}
-                          className="h-full w-full object-cover"
-                          loading="lazy"
-                        />
-                      </div>
+                <div className="absolute bottom-0 left-0 flex w-full flex-col justify-end p-6 sm:p-8 lg:h-full lg:pb-12">
+                  <div className="inline-flex items-center rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-semibold tracking-wide text-emerald-400 mb-4 w-fit">
+                    {activeSession.theme || "SUSTAINABILITY"}
+                  </div>
+                  <h3 className="mb-6 text-3xl font-bold leading-tight text-white sm:text-5xl lg:text-5xl">
+                    {activeSession.title}
+                  </h3>
+
+                  <div className="flex flex-col gap-3 text-sm font-medium text-slate-300">
+                    <div className="flex items-center gap-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-emerald-500/70"><rect width="18" height="18" x="3" y="4" rx="2" ry="2" /><line x1="16" x2="16" y1="2" y2="6" /><line x1="8" x2="8" y1="2" y2="6" /><line x1="3" x2="21" y1="10" y2="10" /></svg>
+                      <span>{activeSession.date}</span>
                     </div>
-
-                    <div className="mt-4 flex items-center justify-center gap-3">
-                      <button
-                        type="button"
-                        className="rounded-full border border-background/50 px-3 py-1 text-xs font-semibold text-background transition-colors hover:bg-background hover:text-foreground"
-                        onClick={goToPrevSlide}
-                      >
-                        Prev
-                      </button>
-                      <button
-                        type="button"
-                        className="rounded-full border border-background/50 px-3 py-1 text-xs font-semibold text-background transition-colors hover:bg-background hover:text-foreground"
-                        onClick={goToNextSlide}
-                      >
-                        Next
-                      </button>
+                    <div className="flex items-center gap-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-emerald-500/70"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
+                      <span>{activeSession.location}</span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-8 grid gap-6 text-sm text-background/85 md:grid-cols-2">
-                <div className="rounded-2xl border border-white/20 bg-white/5 p-5 backdrop-blur-sm">
-                  <p className="text-xs font-semibold uppercase text-background/60">Summary</p>
-                  <p className="mt-3 leading-relaxed">{activeSession.summary}</p>
-                </div>
+              {/* Right Column (Scrollable Details) */}
+              <div className="flex-1 overflow-y-auto p-6 sm:p-8 custom-scrollbar lg:p-10">
+                <div className="mx-auto max-w-2xl space-y-10">
 
-                <div className="rounded-2xl border border-white/20 bg-white/5 p-5 backdrop-blur-sm">
-                  <p className="text-xs font-semibold uppercase text-background/60">Speakers</p>
-                  <p className="mt-3 leading-relaxed">{activeSession.speakers.join(", ")}</p>
-                </div>
-              </div>
+                  {/* Overview Section */}
+                  <section>
+                    <div className="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emerald-400">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" x2="8" y1="13" y2="13" /><line x1="16" x2="8" y1="17" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                      Overview
+                    </div>
+                    <p className="text-base text-slate-300 leading-relaxed">
+                      {activeSession.summary}
+                    </p>
+                  </section>
 
-              <div className="mt-6 rounded-2xl border border-white/20 bg-white/5 p-5 backdrop-blur-sm">
-                <p className="text-xs font-semibold uppercase text-background/60">Highlights</p>
-                <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-background/85">
-                  {activeSession.highlights.map((highlight) => (
-                    <li key={highlight}>{highlight}</li>
-                  ))}
-                </ul>
+                  {/* Key Figures / Speakers */}
+                  <section>
+                    <div className="mb-4 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emerald-400">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                      Key Figures
+                    </div>
+                    <div className="flex flex-wrap gap-3">
+                      {activeSession.speakers.map((speaker, idx) => (
+                        <span key={idx} className="inline-flex items-center px-4 py-2.5 rounded-full text-sm font-bold bg-emerald-500 text-white shadow-[0_0_15px_rgba(16,185,129,0.2)] hover:bg-emerald-400 transition-transform hover:-translate-y-0.5 cursor-default">
+                          {speaker}
+                        </span>
+                      ))}
+                    </div>
+                  </section>
+
+                  {/* Key Outcomes Section */}
+                  <section className="rounded-2xl border border-white/5 bg-white/[0.02] p-6 shadow-inner">
+                    <div className="mb-5 flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emerald-400">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                      Key Outcomes
+                    </div>
+                    <ul className="space-y-4">
+                      {activeSession.highlights.map((highlight, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                          </div>
+                          <span className="text-sm font-medium text-slate-300">{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+
+                  {/* Event Gallery */}
+                  <section className="pb-8">
+                    <div className="mb-6 flex items-center gap-3 text-sm font-bold uppercase tracking-widest text-[#10b981]">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg>
+                      Event Gallery
+                    </div>
+                    {/* Display the 3 images in a grid layout rather than a scroll slider */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                      {activeSession.sliderSet.map((img, idx) => (
+                        <div key={idx} className="group relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-emerald-500/10">
+                          <img
+                            src={img}
+                            alt={`${activeSession.title} gallery image ${idx + 1}`}
+                            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+
+                </div>
               </div>
             </div>
           </div>
