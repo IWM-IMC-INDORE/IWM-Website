@@ -1,4 +1,5 @@
 import { CheckCircle2, Users, Briefcase, Award, BookOpen, Globe } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const features = [
   {
@@ -15,6 +16,7 @@ const features = [
     icon: BookOpen,
     title: "Motivational and Awareness Sessions",
     description: "Exclusive masterclasses on entrepreneurship, personality development, and high-impact resume building.",
+    link: "/sessions",
   },
   {
     icon: Award,
@@ -25,6 +27,7 @@ const features = [
     icon: Globe,
     title: "Network Building",
     description: "Connect with like-minded peers and build lasting professional relationships.",
+    link: "/alumni",
   },
   {
     icon: CheckCircle2,
@@ -51,18 +54,42 @@ export function AboutSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-          {features.map((feature) => (
-            <div
-              key={feature.title}
-              className="group p-6 rounded-2xl bg-card border border-border hover:border-emerald-500/30 hover:shadow-lg transition-all duration-300"
-            >
-              <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-4 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
-                <feature.icon className="w-6 h-6" />
+          {features.map((feature) => {
+            const isLink = Boolean(feature.link);
+
+            const cardContent = (
+              <>
+                <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-4 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                  <feature.icon className="w-6 h-6" />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">{feature.title}</h3>
+                <p className="text-muted-foreground">{feature.description}</p>
+              </>
+            );
+
+            const cardClasses = "group p-6 rounded-2xl bg-card border border-border hover:border-emerald-500/30 hover:shadow-lg transition-all duration-300 block focus:outline-none";
+
+            if (feature.link) {
+              return (
+                <Link
+                  key={feature.title}
+                  to={feature.link}
+                  className={cardClasses}
+                >
+                  {cardContent}
+                </Link>
+              );
+            }
+
+            return (
+              <div
+                key={feature.title}
+                className={cardClasses}
+              >
+                {cardContent}
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

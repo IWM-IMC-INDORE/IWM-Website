@@ -27,7 +27,7 @@ const galleryImages = [
     alt: "Group photo"
   },
   {
-    src: "https://res.cloudinary.com/dvneefjpi/image/upload/v1767773811/ekpedmaakenaam_worldrecord_internshipwithmayorInternship_with_mayor_students_played_an_impact_3_bedyzj.jpg",
+    src: "https://res.cloudinary.com/dvneefjpi/image/upload/v1772177046/When_young_minds_meet_visionary_leadership_amilrw.jpg",
     alt: "Group photo"
   },
   {

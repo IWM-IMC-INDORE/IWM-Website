@@ -239,7 +239,7 @@ const PastSessions = () => {
           className="absolute inset-0 z-0"
           style={{
             backgroundImage:
-              "url('https://res.cloudinary.com/dvneefjpi/image/upload/v1768744064/ChatGPT_Image_Jan_18_2026_07_17_05_PM_wu8sd3.png')",
+              "url('https://res.cloudinary.com/dvneefjpi/image/upload/v1772173500/enhanced_traffic_session_tzaztr.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

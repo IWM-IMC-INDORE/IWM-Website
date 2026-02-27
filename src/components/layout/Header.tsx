@@ -26,23 +26,23 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-card/95 backdrop-blur-md">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 sm:gap-2 pr-1 sm:pr-0">
             <img
               src="https://res.cloudinary.com/dvneefjpi/image/upload/v1767773032/IWM_LOGO_ENHANCED_background_cleared_otc4tw.png"
               alt="IWM - Internship with Mayor"
-              className="h-12 w-12 object-contain"
+              className="h-8 w-8 sm:h-12 sm:w-12 object-contain"
             />
             {/* Visual separator */}
-            <div className="h-8 w-[1.5px] bg-border/60 rounded-full hidden xs:block" />
+            <div className="h-6 sm:h-8 w-[1.5px] bg-border/60 rounded-full hidden xs:block" />
             <img
               src="https://res.cloudinary.com/dvneefjpi/image/upload/v1768325433/enhanced_IMC_logo_background_clear_kdywgz.png"
               alt="IMC - Indore Municipal Corporation"
-              className="h-10 w-auto object-contain"
+              className="h-7 sm:h-10 w-auto object-contain"
             />
           </div>
-          <div className="hidden sm:block">
-            <p className="text-sm font-bold text-foreground leading-tight">Internship with Mayor</p>
-            <p className="text-[10px] font-medium text-muted-foreground uppercase tracking-wide">Indore Municipal Coorporation</p>
+          <div className="flex flex-col justify-center">
+            <p className="text-[12px] sm:text-sm font-bold text-foreground leading-tight whitespace-nowrap">Internship with Mayor</p>
+            <p className="text-[7px] sm:text-[10px] font-medium text-muted-foreground uppercase tracking-wide whitespace-nowrap">Indore Municipal Corporation</p>
           </div>
         </Link>
 

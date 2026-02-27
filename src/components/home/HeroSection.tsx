@@ -16,7 +16,7 @@ export function HeroSection() {
       <div className="absolute inset-0 z-0">
         <img
           src="https://res.cloudinary.com/dvneefjpi/image/upload/v1767773021/563266662_17966057897972078_8206455677809502512_n_hrc7iy.webp"
-          alt="Background"
+          alt="Internship with Mayor Indore Municipal Corporation official program"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/80 to-slate-900/50" />
@@ -79,7 +79,7 @@ export function HeroSection() {
               <div className="absolute inset-10 rounded-full bg-white/95 backdrop-blur-md flex items-center justify-center shadow-2xl overflow-hidden p-1">
                 <img
                   src="https://res.cloudinary.com/dvneefjpi/image/upload/v1767773032/IWM_LOGO_ENHANCED_jkruoi.png"
-                  alt="IWM - Internship with Mayor"
+                  alt="Internship with Mayor (IWM) Indore Municipal Corporation Logo"
                   className="w-full h-full object-contain rounded-full"
                 />
               </div>

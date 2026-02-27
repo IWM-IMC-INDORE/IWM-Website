@@ -74,6 +74,12 @@ export function Footer() {
               <Link to="/alumni" onClick={scrollToTop} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Alumni Stories
               </Link>
+              <Link to="/sessions" onClick={scrollToTop} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Past Sessions
+              </Link>
+              {/* <Link to="/contact" onClick={scrollToTop} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Contact
+              </Link> */}
             </nav>
           </div>
 
@@ -112,9 +118,9 @@ export function Footer() {
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} Indore Municipal Corporation. All rights reserved.
           </p>
-          <Link 
-            to="/developer" 
-            onClick={scrollToTop} 
+          <Link
+            to="/developer"
+            onClick={scrollToTop}
             className="text-xs text-muted-foreground hover:text-civic-green transition-colors group"
           >
             Designed and developed by <span className="font-semibold group-hover:underline">IWM interns</span>
@@ -124,7 +130,7 @@ export function Footer() {
             <Link to="/terms" onClick={scrollToTop} className="hover:text-foreground transition-colors">Terms of Service</Link>
           </div>
         </div>
-       
+
       </div>
     </footer>
   );

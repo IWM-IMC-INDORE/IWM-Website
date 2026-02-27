@@ -2,6 +2,7 @@ import { PublicLayout } from "@/components/layout/PublicLayout";
 import { SEO } from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Users, Calendar, Award, BookOpen, Building2, Target, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 
 const programHighlights = [
@@ -130,20 +131,38 @@ const About = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { title: "Mentorship from IAS/IPS Officers", desc: "Learn directly from senior government officials with decades of experience." },
-              { title: "Motivational & Awareness Sessions", desc: "Exclusive masterclasses on entrepreneurship, personality development, and high-impact resume building." },
+              { title: "Motivational & Awareness Sessions", desc: "Exclusive masterclasses on entrepreneurship, personality development, and high-impact resume building.", link: "/sessions" },
               { title: "Certificate of Completion", desc: "Receive a government-recognized certificate upon successful completion." },
-              { title: "Skill Development", desc: "Gain practical skills in governance, management, and public policy." },
-              { title: "Professional Network", desc: "Build lasting connections with peers and officials." },
+              { title: "Skill Development", desc: "Gain practical skills in governance, management, and public policy.", link: "/sessions" },
+              { title: "Professional Network", desc: "Build lasting connections with peers and officials.", link: "/alumni" },
               { title: "Letter of Recommendation", desc: "Outstanding performers receive official recommendations." },
-            ].map((benefit) => (
-              <div key={benefit.title} className="group bg-card rounded-xl p-6 border border-border hover:border-emerald-500/50 hover:shadow-lg transition-all duration-300">
-                <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-4 group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-300">
-                  <BookOpen className="w-6 h-6" />
+            ].map((benefit) => {
+              const cardContent = (
+                <>
+                  <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-4 group-hover:bg-emerald-500 group-hover:text-white transition-colors duration-300">
+                    <BookOpen className="w-6 h-6" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-2 group-hover:text-emerald-700 transition-colors">{benefit.title}</h3>
+                  <p className="text-sm text-muted-foreground">{benefit.desc}</p>
+                </>
+              );
+
+              const cardClasses = "group bg-card rounded-xl p-6 border border-border hover:border-emerald-500/50 hover:shadow-lg transition-all duration-300 block focus:outline-none";
+
+              if (benefit.link) {
+                return (
+                  <Link key={benefit.title} to={benefit.link} className={cardClasses}>
+                    {cardContent}
+                  </Link>
+                );
+              }
+
+              return (
+                <div key={benefit.title} className={cardClasses}>
+                  {cardContent}
                 </div>
-                <h3 className="font-semibold text-foreground mb-2 group-hover:text-emerald-700 transition-colors">{benefit.title}</h3>
-                <p className="text-sm text-muted-foreground">{benefit.desc}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
